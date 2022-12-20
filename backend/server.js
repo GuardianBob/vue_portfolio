@@ -1,10 +1,11 @@
 var express = require("express");
+require('dotenv').config();
 var bodyParser = require("body-parser");
 // const movie = require("./controllers/movies.controller");
 const cors = require('cors');
 const app = express();
-const PORT = process.env.PORT;
-const HOST = process.env.DOMAIN;
+const port = process.env.PORT;
+const host = process.env.DOMAIN;
 
 // console.log('reached server.js')
 
@@ -35,10 +36,10 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-require('./routes/movies.routes')(app);
+require('./app/routes/user.routes')(app);
 
 app.get('/', (req, res) => {
-  // res.send('Working');
+  res.send('Working');
   console.log('hit the server')
 });
 
@@ -56,5 +57,4 @@ app.get('/', (req, res) => {
 //     // console.log("made it to the routes file..."),
 //     movie.test_connect
 //   );
-
-let server = app.listen(3013, () => console.log(`Express server listening on port 3013`));
+let server = app.listen(port, () => console.log(`Express server listening at ${host} on port ${port}`));

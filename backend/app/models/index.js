@@ -1,5 +1,4 @@
 require("dotenv").config();
-const { fromWeb } = require("form-data");
 const { Sequelize, Op, DataTypes } = require("sequelize");
  
 const sequelize = new Sequelize(
@@ -24,6 +23,7 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 db.Op = Op;
+db.user = require('../models/user.model.js')(sequelize, Sequelize);
 
 db.isUnique = (key, value, table) => {
   return db[table]

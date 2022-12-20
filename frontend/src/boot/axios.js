@@ -7,10 +7,15 @@ import axios from 'axios'
 // good idea to move this instance creation inside of the
 // "export default () => {}" function below (which runs individually
 // for each client)
-let HTTPS = `https://${process.env.REST_API_HOST}:${process.env.REST_API_PORT}/api`
+let HTTP = ''
+if (process.env.DEV_ENV == "true") {
+  HTTP = `http://${process.env.REST_API_HOST}:${process.env.REST_API_PORT}/api`
+} else {
+  HTTP = `https://${process.env.REST_API_HOST}:${process.env.REST_API_PORT}/api`
+}
 const api = axios.create({
   // baseURL: 'https://api.example.com'
-  baseURL: HTTPS,
+  baseURL: HTTP,
   headers: {
     "Content-Type": "application/json; charset=utf-8",
     "Access-Control-Allow-Origin": "*",
