@@ -11,7 +11,6 @@
 
 const { configure } = require('quasar/wrappers');
 
-
 module.exports = configure(function (/* ctx */) {
   return {
     eslint: {
@@ -109,6 +108,9 @@ module.exports = configure(function (/* ctx */) {
 
       // Quasar plugins
       plugins: ["Notify"],
+      define: {
+        'VUE_APP_VERSION': JSON.stringify(process.env.npm_package_version),
+      },
       iconSet: "mdi-v6"
     },
 

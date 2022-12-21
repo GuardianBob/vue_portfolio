@@ -2,16 +2,28 @@
   <q-page class="flex flex-center">
     <img
       alt="Quasar logo"
-      src="~assets/quasar-logo-vertical.svg"
-      style="width: 200px; height: 200px"
+      src="~assets/JBear_Logo_No_Letters_Orange.svg"
+      style="width: 300px; height: 300px"
     >
   </q-page>
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
+import { useQuasar, Notify } from "quasar";
+
 
 export default defineComponent({
-  name: 'IndexPage'
+  name: 'IndexPage',
+  data() {
+    const $q = useQuasar();
+    $q.dark.set(true);
+    return {
+    };
+  },
+  methods: {},
+  mounted() {
+  },
+  
 })
 </script>
