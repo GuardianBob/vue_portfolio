@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title>
-          <img alt="Quasar logo" src="~assets/JBear_Logo_Wide_White.svg" style="width: 200px;" class="q-pt-xs">
+          <img alt="Quasar logo" src="~assets/JBear_Logo_Header.svg" style="width: 200px;" class="q-pt-xs">
         </q-toolbar-title>
 
         <div>v{{ version }}</div>
