@@ -8,17 +8,23 @@ import axios from 'axios'
 // "export default () => {}" function below (which runs individually
 // for each client)
 let HTTP = ''
+// if (process.env.DEV_ENV == "true") {
+//   HTTP = `http://${process.env.REST_API_HOST}:${process.env.REST_API_PORT}/api`
+// } else {
+//   HTTP = `https://${process.env.REST_API_HOST}:${process.env.REST_API_PORT}/api`
+// }
+// WP API:
 if (process.env.DEV_ENV == "true") {
-  HTTP = `http://${process.env.REST_API_HOST}:${process.env.REST_API_PORT}/api`
+  HTTP = `http://${process.env.REST_API_HOST}/${process.env.WP_POSTS_API}`
 } else {
-  HTTP = `https://${process.env.REST_API_HOST}:${process.env.REST_API_PORT}/api`
+  HTTP = `https://${process.env.REST_API_HOST}/${process.env.WP_POSTS_API}`
 }
 const api = axios.create({
   // baseURL: 'https://api.example.com'
   baseURL: HTTP,
   headers: {
-    "Content-Type": "application/json; charset=utf-8",
-    "Access-Control-Allow-Origin": "*",
+    // "Content-Type": "application/json; charset=utf-8",
+    // "Access-Control-Allow-Origin": "*",
   },
 })
 

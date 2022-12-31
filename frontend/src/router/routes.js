@@ -5,7 +5,10 @@ const routes = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/IndexPage.vue') },
-      { path: '/login', component: () => import('pages/Login.vue') }
+      { path: '/login', component: () => import('pages/Login.vue') },
+      { path: '/test_posts', component: () => import('pages/TestPosts.vue') },
+      { path: '/posts', component: () => import('pages/ListPosts.vue') },
+      { path: '/post/:id?', component: () => import('pages/Post.vue') },
     ]
   },
 
