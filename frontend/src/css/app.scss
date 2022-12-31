@@ -1,0 +1,11 @@
+.list-card {
+  max-height: 450px;
+  min-width: 30%;
+  overflow: hidden;
+}
+
+.card-image {
+  object-fit: cover;
+  max-height: 375px;
+  width: 100%;
+}

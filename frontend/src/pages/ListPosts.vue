@@ -5,16 +5,11 @@
       <!-- <div class="col-10 q-mt-xl"> -->
         <!-- <div class="col-lg-10" style="width: 30%; max-width: 350px" v-for="post in posts" :key="post.id"> -->
         <div class="col-lg-4 col-md-4 col-sm-10 q-pa-sm" v-for="post in posts" :key="post.id" >
-          <q-card class="my-card" style="max-height: 450px; min-width: 30%; overflow: hidden;">
-            <span v-if="post.featured_media !== 0" style="max-height: 200px; min-width: 100%">
-              <img :src="post.featured_media" style="width: 100%">
-              <!-- <q-img :src="post.featured_media" style="max-height: 200px; min-width: 100%"> -->
-                <!-- <div class="absolute-bottom text-h6">
-                  {{ post.title.rendered }}
-                </div> -->
-              <!-- </q-img> -->
-              </span>
-            <span v-else style="width:30%; "></span>
+          <q-card class="list-card">
+            <span v-if="post.featured_media !== 0">
+              <img :src="post.featured_media" class="card-image">
+            </span>
+            <span v-else class="card-image"></span>
             
             <q-card-section>
               <div class="text-h6">{{ post.title.rendered }}</div>
