@@ -1,3 +1,5 @@
+import APIService from "./api"
+
 class ParseWP {
   async parse_images(post) {
     let media,
@@ -40,6 +42,22 @@ class ParseWP {
     // }
     // console.log(new_post);
     return new_post
+  }
+
+  async get_posts() {
+    let posts
+    await APIService.get_posts().then(async (results) => {
+      posts = results.data;
+      posts.forEach(async (post) => { 
+        if (post.featured_media != 0) {
+          let url = await APIService.get_media(post.featured_media)
+      // console.log(`url: ${url.data.source_url}`);
+          post.featured_media = url.data.source_url
+        }
+      })
+      console.log(posts)
+    })
+    return posts
   }
 }
 

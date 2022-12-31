@@ -9,3 +9,8 @@
   max-height: 375px;
   width: 100%;
 }
+
+.a, a:link, a:visited, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}

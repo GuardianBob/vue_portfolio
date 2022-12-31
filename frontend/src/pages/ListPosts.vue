@@ -4,19 +4,20 @@
     <div class="row justify-center text-center">
       <!-- <div class="col-10 q-mt-xl"> -->
         <!-- <div class="col-lg-10" style="width: 30%; max-width: 350px" v-for="post in posts" :key="post.id"> -->
-        <div class="col-lg-4 col-md-4 col-sm-10 q-pa-sm" v-for="post in posts" :key="post.id" >
-          <q-card class="list-card">
-            <span v-if="post.featured_media !== 0">
-              <img :src="post.featured_media" class="card-image">
-            </span>
-            <span v-else class="card-image"></span>
-            
-            <q-card-section>
-              <div class="text-h6">{{ post.title.rendered }}</div>
-              <!-- <div :id="post.id"></div> -->
-            </q-card-section>
-          </q-card>
-          
+        <div class="col-lg-4 col-md-4 col-sm-10 q-pa-sm" v-for="post in posts" :key="post.id">
+          <router-link :to="'/post/' + post.id">
+            <q-card class="list-card">
+              <span v-if="post.featured_media !== 0">
+                <img :src="post.featured_media" class="card-image">
+              </span>
+              <span v-else class="card-image"></span>
+              
+              <q-card-section>
+                <div class="text-h6" :link="'/post/' + post.id">{{ post.title.rendered }}</div>
+                <!-- <div :id="post.id"></div> -->
+              </q-card-section>
+            </q-card>
+          </router-link>
 
         </div>
 
@@ -40,31 +41,33 @@ export default defineComponent({
     $q.dark.set(true);
     return {
       image: '',
-      posts: ref([]),
+      posts: [],
       images: [],
       text: [],
     };
   },
+  computed: {
+  },
+
   methods: {
     async get_posts() {
       await APIService.get_posts().then(async (results) => {
-        let posts = results.data;
-        posts.forEach(async (post) => { 
-          console.log(post.featured_media)
+        this.posts = results.data;
+        this.posts.forEach(async (post) => { 
           if (post.featured_media != 0) {
             post.featured_media = await this.get_image(post.featured_media)
           }
-          this.posts.push(post)
         })
-        console.log(posts);
       })
-      return
+    },
+
+    async get_post(id) {
+
     },
 
     async get_image(id) {
-      console.log("getting image")
       let url = await APIService.get_media(id)
-      console.log(`url: ${url.data.source_url}`);
+      // console.log(`url: ${url.data.source_url}`);
       return url.data.source_url
     },
   },
@@ -73,9 +76,6 @@ export default defineComponent({
     this.get_posts();
   },
   updated() {
-    // this.posts.forEach(async (post) => {
-    //   document.getElementById(post.id).innerHTML = post.excerpt.rendered
-    // })
   },
 })
 </script>
