@@ -11,6 +11,13 @@ const routes = [
       { path: '/post/:id?', component: () => import('pages/Post.vue') },
     ]
   },
+  {
+    path: '/portfolio',
+    component: () => import('layouts/PortfolioLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/CodePortfolio.vue') },
+    ]
+  },
 
   // Always leave this as last one,
   // but you can also remove it
