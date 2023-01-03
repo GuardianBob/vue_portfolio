@@ -4,10 +4,10 @@ import axios from 'axios'
 class APIService {
 
   // =============== Storage Calls =================
-  get_posts(orderby = 'id', order = 'desc') {
-    // The valid values for orderby will vary depending on the queried resource; 
+  get_posts(orderby = 'id', order = 'desc', page = '1', per_page = '9') {
+    // The valid values for orderby will vary depending on the queried resource;
     // for the / wp / v2 / posts collection, the valid values are “date,” “relevance,” “id,” “include,” “title,” and “slug”.
-    return api.get(`/posts?orderby=${orderby}&order=${order}`);
+    return api.get(`/posts?orderby=${orderby}&order=${order}&page=${page}&per_page=${per_page}`);
   }
 
   get_post(id) {
