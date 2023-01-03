@@ -137,8 +137,8 @@
       <!-- start of hero section -->
       <div id="hero" class="hero-section hide-in-preloading" data-paneffect="true" ref="heroSection">
         <div class="hero-img">
-          <div class="layer"><img src="src/assets/images/profile_01.png" alt="User Name"></div>
-          <div class="layer"><img src="src/assets/images/profile_01.png" alt="User Name"></div>
+          <div class="layer"><img src="src/assets/images/profile_02.png" alt="Jesse"></div>
+          <div class="layer"><img src="src/assets/images/profile_02.png" alt="Jesse"></div>
         </div>
   
         <div class="hero-text">
@@ -230,8 +230,8 @@
   
             <!-- about image -->
             <div class="about-img col-lg-6">
-              <div class="layer"><img src="src/assets/images/profile_02.png" alt="User Name"></div>
-              <div class="layer"><img src="src/assets/images/profile_02.png" alt="User Name"></div>
+              <div class="layer"><img src="src/assets/images/profile_01.png" alt="Jesse"></div>
+              <div class="layer"><img src="src/assets/images/profile_01.png" alt="Jesse"></div>
             </div>
   
             <!-- text box -->
