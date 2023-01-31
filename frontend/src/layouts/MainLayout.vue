@@ -47,6 +47,7 @@
 
 <script>
 import { defineComponent, ref } from 'vue'
+import { useQuasar, colors } from "quasar";
 import EssentialLink from 'components/EssentialLink.vue'
 import { version } from '../../package.json'
 
@@ -92,6 +93,8 @@ const linksList = [
   },
 ]
 
+
+
 export default defineComponent({
   name: 'MainLayout',
 
@@ -101,6 +104,8 @@ export default defineComponent({
 
   setup () {
     const leftDrawerOpen = ref(false)
+    const $q = useQuasar();
+    $q.dark.set(true);
 
     return {
       essentialLinks: linksList,

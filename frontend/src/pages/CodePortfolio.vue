@@ -325,10 +325,10 @@
             <div class="col-lg-6">
               <div class="experience-timeline">
                 <div class="timepath" ref="experienceTimepath">
-                  <span class="line"></span>
+                  <!-- <span class="line"></span> -->
                   <div v-for="line in experienceChunks" :key="line">
-                    <span class="semicircle"></span>
-                    <span class="line"></span>
+                    <!-- <span class="semicircle"></span> -->
+                    <!-- <span class="line"></span> -->
                 </div>
                 </div>
   
@@ -655,6 +655,7 @@ import { useQuasar, Notify } from "quasar"
 import APIService from "../../services/api"
 import ParseWP from "../../services/parseWP"
 import { experienceItems, skillsItems, toolsItems } from 'src/assets/info/info'
+// import 'src/scripts/plugins.min'
 
 var animationsMixin = {
   mounted() {
@@ -1128,32 +1129,27 @@ export default defineComponent({
         navLinks: [{
           url: '#hero',
           title: {
-            en: 'Home',
-            ar: 'الرئيسية'
+            en: 'Home',            
           }
         }, {
           url: '#about',
           title: {
-            en: 'About',
-            ar: 'من أنا'
+            en: 'About',            
           }
         }, {
           url: '#skills',
           title: {
-            en: 'Skills',
-            ar: 'مهاراتي'
+            en: 'Skills',            
           }
         }, {
           url: '#portfolio',
           title: {
-            en: 'Portfolio',
-            ar: 'أعمالي'
+            en: 'Portfolio',            
           }
         }, {
           url: '#contact',
           title: {
-            en: 'Contact',
-            ar: 'اتصل بي'
+            en: 'Contact',            
           }
         }],
         // flag to toggle between skills types in skills section
@@ -1366,15 +1362,12 @@ export default defineComponent({
           imgUrl: 'https://via.placeholder.com/400x400',
           title: {
             en: 'Lorem Ipsum Dolor 1',
-            ar: 'هنا عنوان المشروع 1'
           },
           date: {
             en: 'April 2021',
-            ar: 'أبريل 2021'
           },
           desc: {
             en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            ar: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع. ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً، دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.'
           },
           category: 'HTML',
           tools: ['HTML', 'PugJS', 'CSS', 'SCSS', 'JavaScript', 'Gulp', 'Bootstrap', 'AJAX', 'Vue', 'Firebase'],
@@ -1383,35 +1376,30 @@ export default defineComponent({
               url: 'https://via.placeholder.com/355x200',
               caption: {
                 en: 'caption 5',
-                ar: 'تسمية توضيحية 5'
               }
             },
             img2: {
               url: 'https://via.placeholder.com/330x460',
               caption: {
                 en: 'caption 4',
-                ar: 'تسمية توضيحية 4'
               }
             },
             img3: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 3',
-                ar: 'تسمية توضيحية 3'
               }
             },
             img4: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 2',
-                ar: 'تسمية توضيحية 2'
               }
             },
             img5: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 1',
-                ar: 'تسمية توضيحية 1'
               }
             }
           }
@@ -1421,15 +1409,12 @@ export default defineComponent({
           imgUrl: 'https://via.placeholder.com/530x300',
           title: {
             en: 'Lorem Ipsum Dolor 2',
-            ar: 'هنا عنوان المشروع 2'
           },
           date: {
             en: 'April 2021',
-            ar: 'أبريل 2021'
           },
           desc: {
             en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            ar: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع. ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً، دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.'
           },
           category: 'Angular',
           tools: ['HTML', 'Slim', 'CSS', 'Less', 'JavaScript', 'TypeScript', 'TailwindCSS', 'AJAX', 'Angular', 'NodeJs', 'MongoDB'],
@@ -1438,35 +1423,30 @@ export default defineComponent({
               url: 'https://via.placeholder.com/355x200',
               caption: {
                 en: 'caption 5',
-                ar: 'تسمية توضيحية 5'
               }
             },
             img2: {
               url: 'https://via.placeholder.com/330x460',
               caption: {
                 en: 'caption 4',
-                ar: 'تسمية توضيحية 4'
               }
             },
             img3: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 3',
-                ar: 'تسمية توضيحية 3'
               }
             },
             img4: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 2',
-                ar: 'تسمية توضيحية 2'
               }
             },
             img5: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 1',
-                ar: 'تسمية توضيحية 1'
               }
             }
           }
@@ -1476,15 +1456,12 @@ export default defineComponent({
           imgUrl: 'https://via.placeholder.com/390x390',
           title: {
             en: 'Lorem Ipsum Dolor 3',
-            ar: 'هنا عنوان المشروع 3'
           },
           date: {
             en: 'April 2021',
-            ar: 'أبريل 2021'
           },
           desc: {
             en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            ar: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع. ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً، دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.'
           },
           category: 'Vue',
           tools: ['HTML', 'PugJS', 'CSS', 'SCSS', 'JavaScript', 'Gulp', 'Materialize', 'AJAX', 'Vue', 'Firebase'],
@@ -1493,35 +1470,30 @@ export default defineComponent({
               url: 'https://via.placeholder.com/355x200',
               caption: {
                 en: 'caption 5',
-                ar: 'تسمية توضيحية 5'
               }
             },
             img2: {
               url: 'https://via.placeholder.com/330x460',
               caption: {
                 en: 'caption 4',
-                ar: 'تسمية توضيحية 4'
               }
             },
             img3: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 3',
-                ar: 'تسمية توضيحية 3'
               }
             },
             img4: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 2',
-                ar: 'تسمية توضيحية 2'
               }
             },
             img5: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 1',
-                ar: 'تسمية توضيحية 1'
               }
             }
           }
@@ -1531,15 +1503,12 @@ export default defineComponent({
           imgUrl: 'https://via.placeholder.com/340x510',
           title: {
             en: 'Lorem Ipsum Dolor 4',
-            ar: 'هنا عنوان المشروع 4'
           },
           date: {
             en: 'April 2021',
-            ar: 'أبريل 2021'
           },
           desc: {
             en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            ar: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع. ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً، دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.'
           },
           category: 'HTML',
           tools: ['HTML', 'Slim', 'CSS', 'Less', 'JavaScript', 'TypeScript', 'TailwindCSS', 'AJAX', 'Angular', 'NodeJs', 'MongoDB'],
@@ -1548,35 +1517,30 @@ export default defineComponent({
               url: 'https://via.placeholder.com/355x200',
               caption: {
                 en: 'caption 5',
-                ar: 'تسمية توضيحية 5'
               }
             },
             img2: {
               url: 'https://via.placeholder.com/330x460',
               caption: {
                 en: 'caption 4',
-                ar: 'تسمية توضيحية 4'
               }
             },
             img3: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 3',
-                ar: 'تسمية توضيحية 3'
               }
             },
             img4: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 2',
-                ar: 'تسمية توضيحية 2'
               }
             },
             img5: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 1',
-                ar: 'تسمية توضيحية 1'
               }
             }
           }
@@ -1586,15 +1550,12 @@ export default defineComponent({
           imgUrl: 'https://via.placeholder.com/380x215',
           title: {
             en: 'Lorem Ipsum Dolor 5',
-            ar: 'هنا عنوان المشروع 5'
           },
           date: {
             en: 'April 2021',
-            ar: 'أبريل 2021'
           },
           desc: {
             en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            ar: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع. ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً، دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.'
           },
           category: 'Angular',
           tools: ['HTML', 'PugJS', 'CSS', 'SCSS', 'JavaScript', 'Gulp', 'Bootstrap', 'AJAX', 'Vue', 'Firebase'],
@@ -1603,35 +1564,30 @@ export default defineComponent({
               url: 'https://via.placeholder.com/355x200',
               caption: {
                 en: 'caption 5',
-                ar: 'تسمية توضيحية 5'
               }
             },
             img2: {
               url: 'https://via.placeholder.com/330x460',
               caption: {
                 en: 'caption 4',
-                ar: 'تسمية توضيحية 4'
               }
             },
             img3: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 3',
-                ar: 'تسمية توضيحية 3'
               }
             },
             img4: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 2',
-                ar: 'تسمية توضيحية 2'
               }
             },
             img5: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 1',
-                ar: 'تسمية توضيحية 1'
               }
             }
           }
@@ -1641,15 +1597,12 @@ export default defineComponent({
           imgUrl: 'https://via.placeholder.com/400x300',
           title: {
             en: 'Lorem Ipsum Dolor 6',
-            ar: 'هنا عنوان المشروع 6'
           },
           date: {
             en: 'April 2021',
-            ar: 'أبريل 2021'
           },
           desc: {
             en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            ar: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع. ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً، دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.'
           },
           category: 'Vue',
           tools: ['HTML', 'Slim', 'CSS', 'Less', 'JavaScript', 'TypeScript', 'Materialize', 'AJAX', 'Angular', 'NodeJs', 'MongoDB'],
@@ -1658,35 +1611,30 @@ export default defineComponent({
               url: 'https://via.placeholder.com/355x200',
               caption: {
                 en: 'caption 5',
-                ar: 'تسمية توضيحية 5'
               }
             },
             img2: {
               url: 'https://via.placeholder.com/330x460',
               caption: {
                 en: 'caption 4',
-                ar: 'تسمية توضيحية 4'
               }
             },
             img3: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 3',
-                ar: 'تسمية توضيحية 3'
               }
             },
             img4: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 2',
-                ar: 'تسمية توضيحية 2'
               }
             },
             img5: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 1',
-                ar: 'تسمية توضيحية 1'
               }
             }
           }
@@ -1696,15 +1644,12 @@ export default defineComponent({
           imgUrl: 'https://via.placeholder.com/380x215',
           title: {
             en: 'Lorem Ipsum Dolor 7',
-            ar: 'هنا عنوان المشروع 7'
           },
           date: {
             en: 'April 2021',
-            ar: 'أبريل 2021'
           },
           desc: {
             en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            ar: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع. ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً، دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.'
           },
           category: 'HTML',
           tools: ['HTML', 'PugJS', 'CSS', 'SCSS', 'JavaScript', 'Gulp', 'Bootstrap', 'AJAX', 'Vue', 'Firebase'],
@@ -1713,35 +1658,30 @@ export default defineComponent({
               url: 'https://via.placeholder.com/355x200',
               caption: {
                 en: 'caption 5',
-                ar: 'تسمية توضيحية 5'
               }
             },
             img2: {
               url: 'https://via.placeholder.com/330x460',
               caption: {
                 en: 'caption 4',
-                ar: 'تسمية توضيحية 4'
               }
             },
             img3: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 3',
-                ar: 'تسمية توضيحية 3'
               }
             },
             img4: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 2',
-                ar: 'تسمية توضيحية 2'
               }
             },
             img5: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 1',
-                ar: 'تسمية توضيحية 1'
               }
             }
           }
@@ -1751,15 +1691,12 @@ export default defineComponent({
           imgUrl: 'https://via.placeholder.com/340x340',
           title: {
             en: 'Lorem Ipsum Dolor 8',
-            ar: 'هنا عنوان المشروع 8'
           },
           date: {
             en: 'April 2021',
-            ar: 'أبريل 2021'
           },
           desc: {
             en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            ar: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع. ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً، دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.'
           },
           category: 'Vue',
           tools: ['HTML', 'Slim', 'CSS', 'Less', 'JavaScript', 'TypeScript', 'TailwindCSS', 'AJAX', 'Angular', 'NodeJs', 'MongoDB'],
@@ -1768,35 +1705,30 @@ export default defineComponent({
               url: 'https://via.placeholder.com/355x200',
               caption: {
                 en: 'caption 5',
-                ar: 'تسمية توضيحية 5'
               }
             },
             img2: {
               url: 'https://via.placeholder.com/330x460',
               caption: {
                 en: 'caption 4',
-                ar: 'تسمية توضيحية 4'
               }
             },
             img3: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 3',
-                ar: 'تسمية توضيحية 3'
               }
             },
             img4: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 2',
-                ar: 'تسمية توضيحية 2'
               }
             },
             img5: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 1',
-                ar: 'تسمية توضيحية 1'
               }
             }
           }
@@ -1806,15 +1738,12 @@ export default defineComponent({
           imgUrl: 'https://via.placeholder.com/300x375',
           title: {
             en: 'Lorem Ipsum Dolor 9',
-            ar: 'هنا عنوان المشروع 9'
           },
           date: {
             en: 'April 2021',
-            ar: 'أبريل 2021'
           },
           desc: {
             en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            ar: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع. ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً، دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.'
           },
           category: 'Angular',
           tools: ['HTML', 'PugJS', 'CSS', 'SCSS', 'JavaScript', 'Gulp', 'Materialize', 'AJAX', 'Vue', 'Firebase'],
@@ -1823,35 +1752,30 @@ export default defineComponent({
               url: 'https://via.placeholder.com/355x200',
               caption: {
                 en: 'caption 5',
-                ar: 'تسمية توضيحية 5'
               }
             },
             img2: {
               url: 'https://via.placeholder.com/330x460',
               caption: {
                 en: 'caption 4',
-                ar: 'تسمية توضيحية 4'
               }
             },
             img3: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 3',
-                ar: 'تسمية توضيحية 3'
               }
             },
             img4: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 2',
-                ar: 'تسمية توضيحية 2'
               }
             },
             img5: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 1',
-                ar: 'تسمية توضيحية 1'
               }
             }
           }
@@ -1861,15 +1785,12 @@ export default defineComponent({
           imgUrl: 'https://via.placeholder.com/350x200',
           title: {
             en: 'Lorem Ipsum Dolor 10',
-            ar: 'هنا عنوان المشروع 10'
           },
           date: {
             en: 'April 2021',
-            ar: 'أبريل 2021'
           },
           desc: {
             en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            ar: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع. ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً، دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.'
           },
           category: 'HTML',
           tools: ['HTML', 'Slim', 'CSS', 'Less', 'JavaScript', 'TypeScript', 'Bootstrap', 'AJAX', 'Angular', 'NodeJs', 'MongoDB'],
@@ -1878,35 +1799,30 @@ export default defineComponent({
               url: 'https://via.placeholder.com/355x200',
               caption: {
                 en: 'caption 5',
-                ar: 'تسمية توضيحية 5'
               }
             },
             img2: {
               url: 'https://via.placeholder.com/330x460',
               caption: {
                 en: 'caption 4',
-                ar: 'تسمية توضيحية 4'
               }
             },
             img3: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 3',
-                ar: 'تسمية توضيحية 3'
               }
             },
             img4: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 2',
-                ar: 'تسمية توضيحية 2'
               }
             },
             img5: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 1',
-                ar: 'تسمية توضيحية 1'
               }
             }
           }
@@ -1916,15 +1832,12 @@ export default defineComponent({
           imgUrl: 'https://via.placeholder.com/400x300',
           title: {
             en: 'Lorem Ipsum Dolor 11',
-            ar: 'هنا عنوان المشروع 11'
           },
           date: {
             en: 'April 2021',
-            ar: 'أبريل 2021'
           },
           desc: {
             en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            ar: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع. ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً، دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.'
           },
           category: 'Vue',
           tools: ['HTML', 'PugJS', 'CSS', 'SCSS', 'JavaScript', 'Gulp', 'TailwindCSS', 'AJAX', 'Angular', 'Firebase'],
@@ -1933,35 +1846,30 @@ export default defineComponent({
               url: 'https://via.placeholder.com/355x200',
               caption: {
                 en: 'caption 5',
-                ar: 'تسمية توضيحية 5'
               }
             },
             img2: {
               url: 'https://via.placeholder.com/330x460',
               caption: {
                 en: 'caption 4',
-                ar: 'تسمية توضيحية 4'
               }
             },
             img3: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 3',
-                ar: 'تسمية توضيحية 3'
               }
             },
             img4: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 2',
-                ar: 'تسمية توضيحية 2'
               }
             },
             img5: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 1',
-                ar: 'تسمية توضيحية 1'
               }
             }
           }
@@ -1971,15 +1879,12 @@ export default defineComponent({
           imgUrl: 'https://via.placeholder.com/300x280',
           title: {
             en: 'Lorem Ipsum Dolor 12',
-            ar: 'هنا عنوان المشروع 12'
           },
           date: {
             en: 'April 2021',
-            ar: 'أبريل 2021'
           },
           desc: {
             en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            ar: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع. ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً، دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.'
           },
           category: 'Angular',
           tools: ['HTML', 'Slim', 'CSS', 'Less', 'JavaScript', 'TypeScript', 'Materialize', 'AJAX', 'Vue', 'NodeJs', 'MongoDB'],
@@ -1988,35 +1893,30 @@ export default defineComponent({
               url: 'https://via.placeholder.com/355x200',
               caption: {
                 en: 'caption 5',
-                ar: 'تسمية توضيحية 5'
               }
             },
             img2: {
               url: 'https://via.placeholder.com/330x460',
               caption: {
                 en: 'caption 4',
-                ar: 'تسمية توضيحية 4'
               }
             },
             img3: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 3',
-                ar: 'تسمية توضيحية 3'
               }
             },
             img4: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 2',
-                ar: 'تسمية توضيحية 2'
               }
             },
             img5: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 1',
-                ar: 'تسمية توضيحية 1'
               }
             }
           }
@@ -2026,15 +1926,12 @@ export default defineComponent({
           imgUrl: 'https://via.placeholder.com/300x270',
           title: {
             en: 'Lorem Ipsum Dolor 13',
-            ar: 'هنا عنوان المشروع 13'
           },
           date: {
             en: 'April 2021',
-            ar: 'أبريل 2021'
           },
           desc: {
             en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            ar: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع. ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً، دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.'
           },
           category: 'HTML',
           tools: ['HTML', 'PugJS', 'CSS', 'SCSS', 'JavaScript', 'Gulp', 'TailwindCSS', 'AJAX', 'Angular', 'Firebase'],
@@ -2043,35 +1940,30 @@ export default defineComponent({
               url: 'https://via.placeholder.com/355x200',
               caption: {
                 en: 'caption 5',
-                ar: 'تسمية توضيحية 5'
               }
             },
             img2: {
               url: 'https://via.placeholder.com/330x460',
               caption: {
                 en: 'caption 4',
-                ar: 'تسمية توضيحية 4'
               }
             },
             img3: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 3',
-                ar: 'تسمية توضيحية 3'
               }
             },
             img4: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 2',
-                ar: 'تسمية توضيحية 2'
               }
             },
             img5: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 1',
-                ar: 'تسمية توضيحية 1'
               }
             }
           }
@@ -2081,15 +1973,12 @@ export default defineComponent({
           imgUrl: 'https://via.placeholder.com/375x500',
           title: {
             en: 'Lorem Ipsum Dolor 14',
-            ar: 'هنا عنوان المشروع 14'
           },
           date: {
             en: 'April 2021',
-            ar: 'أبريل 2021'
           },
           desc: {
             en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            ar: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع. ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً، دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.'
           },
           category: 'Angular',
           tools: ['HTML', 'Slim', 'CSS', 'Less', 'JavaScript', 'TypeScript', 'Bootstrap', 'AJAX', 'Vue', 'NodeJs', 'MongoDB'],
@@ -2098,35 +1987,30 @@ export default defineComponent({
               url: 'https://via.placeholder.com/355x200',
               caption: {
                 en: 'caption 5',
-                ar: 'تسمية توضيحية 5'
               }
             },
             img2: {
               url: 'https://via.placeholder.com/330x460',
               caption: {
                 en: 'caption 4',
-                ar: 'تسمية توضيحية 4'
               }
             },
             img3: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 3',
-                ar: 'تسمية توضيحية 3'
               }
             },
             img4: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 2',
-                ar: 'تسمية توضيحية 2'
               }
             },
             img5: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 1',
-                ar: 'تسمية توضيحية 1'
               }
             }
           }
@@ -2136,15 +2020,12 @@ export default defineComponent({
           imgUrl: 'https://via.placeholder.com/375x240',
           title: {
             en: 'Lorem Ipsum Dolor 15',
-            ar: 'هنا عنوان المشروع 15'
           },
           date: {
             en: 'April 2021',
-            ar: 'أبريل 2021'
           },
           desc: {
             en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            ar: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع. ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً، دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.'
           },
           category: 'Vue',
           tools: ['HTML', 'PugJS', 'CSS', 'SCSS', 'JavaScript', 'Gulp', 'Materialize', 'AJAX', 'Angular', 'Firebase'],
@@ -2153,35 +2034,30 @@ export default defineComponent({
               url: 'https://via.placeholder.com/355x200',
               caption: {
                 en: 'caption 5',
-                ar: 'تسمية توضيحية 5'
               }
             },
             img2: {
               url: 'https://via.placeholder.com/330x460',
               caption: {
                 en: 'caption 4',
-                ar: 'تسمية توضيحية 4'
               }
             },
             img3: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 3',
-                ar: 'تسمية توضيحية 3'
               }
             },
             img4: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 2',
-                ar: 'تسمية توضيحية 2'
               }
             },
             img5: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 1',
-                ar: 'تسمية توضيحية 1'
               }
             }
           }
@@ -2191,15 +2067,12 @@ export default defineComponent({
           imgUrl: 'https://via.placeholder.com/570x400',
           title: {
             en: 'Lorem Ipsum Dolor 16',
-            ar: 'هنا عنوان المشروع 16'
           },
           date: {
             en: 'April 2021',
-            ar: 'أبريل 2021'
           },
           desc: {
             en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            ar: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع. ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً، دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.'
           },
           category: 'HTML',
           tools: ['HTML', 'Slim', 'CSS', 'Less', 'JavaScript', 'TypeScript', 'Bootstrap', 'AJAX', 'Vue', 'NodeJs', 'MongoDB'],
@@ -2208,35 +2081,30 @@ export default defineComponent({
               url: 'https://via.placeholder.com/355x200',
               caption: {
                 en: 'caption 5',
-                ar: 'تسمية توضيحية 5'
               }
             },
             img2: {
               url: 'https://via.placeholder.com/330x460',
               caption: {
                 en: 'caption 4',
-                ar: 'تسمية توضيحية 4'
               }
             },
             img3: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 3',
-                ar: 'تسمية توضيحية 3'
               }
             },
             img4: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 2',
-                ar: 'تسمية توضيحية 2'
               }
             },
             img5: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 1',
-                ar: 'تسمية توضيحية 1'
               }
             }
           }
@@ -2246,15 +2114,12 @@ export default defineComponent({
           imgUrl: 'https://via.placeholder.com/375x300',
           title: {
             en: 'Lorem Ipsum Dolor 17',
-            ar: 'هنا عنوان المشروع 17'
           },
           date: {
             en: 'April 2021',
-            ar: 'أبريل 2021'
           },
           desc: {
             en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            ar: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع. ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً، دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.'
           },
           category: 'Angular',
           tools: ['HTML', 'PugJS', 'CSS', 'SCSS', 'JavaScript', 'Gulp', 'TailwindCSS', 'AJAX', 'Angular', 'Firebase'],
@@ -2263,35 +2128,30 @@ export default defineComponent({
               url: 'https://via.placeholder.com/355x200',
               caption: {
                 en: 'caption 5',
-                ar: 'تسمية توضيحية 5'
               }
             },
             img2: {
               url: 'https://via.placeholder.com/330x460',
               caption: {
                 en: 'caption 4',
-                ar: 'تسمية توضيحية 4'
               }
             },
             img3: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 3',
-                ar: 'تسمية توضيحية 3'
               }
             },
             img4: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 2',
-                ar: 'تسمية توضيحية 2'
               }
             },
             img5: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 1',
-                ar: 'تسمية توضيحية 1'
               }
             }
           }
@@ -2301,15 +2161,12 @@ export default defineComponent({
           imgUrl: 'https://via.placeholder.com/350x500',
           title: {
             en: 'Lorem Ipsum Dolor 18',
-            ar: 'هنا عنوان المشروع 18'
           },
           date: {
             en: 'April 2021',
-            ar: 'أبريل 2021'
           },
           desc: {
             en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-            ar: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع. ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً، دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.'
           },
           category: 'Vue',
           tools: ['HTML', 'Slim', 'CSS', 'Less', 'JavaScript', 'TypeScript', 'Materialize', 'AJAX', 'Vue', 'NodeJs', 'MongoDB'],
@@ -2318,35 +2175,30 @@ export default defineComponent({
               url: 'https://via.placeholder.com/355x200',
               caption: {
                 en: 'caption 5',
-                ar: 'تسمية توضيحية 5'
               }
             },
             img2: {
               url: 'https://via.placeholder.com/330x460',
               caption: {
                 en: 'caption 4',
-                ar: 'تسمية توضيحية 4'
               }
             },
             img3: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 3',
-                ar: 'تسمية توضيحية 3'
               }
             },
             img4: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 2',
-                ar: 'تسمية توضيحية 2'
               }
             },
             img5: {
               url: 'https://via.placeholder.com/300x225',
               caption: {
                 en: 'caption 1',
-                ar: 'تسمية توضيحية 1'
               }
             }
           }
@@ -2358,253 +2210,199 @@ export default defineComponent({
           imgUrl: 'https://via.placeholder.com/200',
           quoteContent: {
             en: 'Nafie simply provides amazing web development service. Their team is extremely professional and the easiest to meet I have ever worked with. I would recommend Nafie to anyone.',
-            ar: 'محمد يقدم خدمات مذهلة في تطوير الويب، ولديه فريق محترف يجعل التعامل معهم مطمئن للغاية. أوصي بفريقهم للجميع.'
           },
           quoteAuthor: {
             en: 'Terrell Grimes',
-            ar: 'جابر العواني'
           },
           jobTitle: {
             en: 'Photographer',
-            ar: 'مصور فوتوغرافي'
           }
         }, {
           imgUrl: 'https://via.placeholder.com/200',
           quoteContent: {
             en: 'Excellent Team to work with. Always positive to find the most appropriate solution. Nafie is one of the professional web development agency that provides awesome services.',
-            ar: 'فريق ممتاز للعمل معه. إيجابي دائمًا للعثور على الحل الأنسب. هم إحدى شركات تطوير الويب المحترفة التي تقدم خدمات رائعة.'
           },
           quoteAuthor: {
             en: 'Lonny Corkery',
-            ar: 'حسون القلال'
           },
           jobTitle: {
             en: 'Project Manager',
-            ar: 'مدير المشاريع'
           }
         }, {
           imgUrl: 'https://via.placeholder.com/200',
           quoteContent: {
             en: 'Nafie team is very professional, always delivers high quality results, and is always there to help. Look forward to working with Nafie in other projects.',
-            ar: 'محمد مطور محترف للغاية يقدم دائمًا نتائج عالية الجودة ، وهو دائمًا موجود للمساعدة. نتطلع إلى العمل معه في مشاريع أخرى.'
           },
           quoteAuthor: {
             en: 'Max Schmidt DDS',
-            ar: 'مصطفى الخليفي'
           },
           jobTitle: {
             en: 'CEO, Designer',
-            ar: 'أخصائي SEO'
           }
         }, {
           imgUrl: 'https://via.placeholder.com/200',
           quoteContent: {
             en: 'Nafie worked on a handful of projects for us and has always exceeded our expectations. Nafie team is dedicated, talented and a delight to work with.',
-            ar: 'عمل محمد في عدد كبير من المشاريع لأجلنا وكان دائمًا يفوق توقعاتنا. مطور متخصص وموهوب ونسعد دائمًا بالعمل معه.'
           },
           quoteAuthor: {
             en: 'Amir Stoltenberg',
-            ar: 'عباس العنابي'
           },
           jobTitle: {
             en: 'Sales Manager',
-            ar: 'مدير مبيعات'
           }
         }, {
           imgUrl: 'https://via.placeholder.com/200',
           quoteContent: {
             en: 'I know I can count on your service if I need my project done fast and with the best possible result. I am a regular customer and hope to continue our work!',
-            ar: 'يمكنني الاعتماد على خدمات محمد دائمًا وخاصة إذا كنت بحاجة إلى إنجاز مشروعي في أقل وقت وبأفضل نتيجة ممكنة. أنا عميل منتظم لديه وآمل أن نواصل عملنا معا دائمًا.'
           },
           quoteAuthor: {
             en: 'Kenton Marquardt',
-            ar: 'سمير النجار'
           },
           jobTitle: {
             en: 'Art Director',
-            ar: 'آرت دايركتور'
           }
         }, {
           imgUrl: 'https://via.placeholder.com/200',
           quoteContent: {
             en: 'Muhammad was a real pleasure to work with and we look forward to working with him again. He’s definitely the kind of developer you can trust with a project from start to finish.',
-            ar: 'أنا سعيد حقًا بالعمل مع محمد وأتطلع إلى العمل معه مرة أخرى قريبا. هو بالتأكيد من المطورين الذي يمكنك الوثوق بهم للعمل على مشروعك من البداية إلى النهاية.'
           },
           quoteAuthor: {
             en: 'Reyna Hammes',
-            ar: 'أمير داوود'
           },
           jobTitle: {
             en: 'Motion Graphic Animator',
-            ar: 'مصمم موشن جرافيك'
           }
         }, {
           imgUrl: 'https://via.placeholder.com/200',
           quoteContent: {
             en: 'Muhammad was a real pleasure to work with and we look forward to working with him again. He’s definitely the kind of developer you can trust with a project from start to finish.',
-            ar: 'أنا سعيد حقًا بالعمل مع محمد وأتطلع إلى العمل معه مرة أخرى قريبا. هو بالتأكيد من المطورين الذي يمكنك الوثوق بهم للعمل على مشروعك من البداية إلى النهاية.'
           },
           quoteAuthor: {
             en: 'Jovan Parisian',
-            ar: 'منصور السقاط'
           },
           jobTitle: {
             en: 'Motion Graphic Animator',
-            ar: 'مصمم موشن جرافيك'
           }
         }, {
           imgUrl: 'https://via.placeholder.com/200',
           quoteContent: {
             en: 'I know I can count on your service if I need my project done fast and with the best possible result. I am a regular customer and hope to continue our work!',
-            ar: 'يمكنني الاعتماد على خدمات محمد دائمًا وخاصة إذا كنت بحاجة إلى إنجاز مشروعي في أقل وقت وبأفضل نتيجة ممكنة. أنا عميل منتظم لديه وآمل أن نواصل عملنا معا دائمًا.'
           },
           quoteAuthor: {
             en: 'Pasquale Deckow',
-            ar: 'عطا بن عاشور'
           },
           jobTitle: {
             en: 'Art Director',
-            ar: 'آرت دايركتور'
           }
         }, {
           imgUrl: 'https://via.placeholder.com/200',
           quoteContent: {
             en: 'Nafie worked on a handful of projects for us and has always exceeded our expectations. Nafie team is dedicated, talented and a delight to work with.',
-            ar: 'عمل محمد في عدد كبير من المشاريع لأجلنا وكان دائمًا يفوق توقعاتنا. مطور متخصص وموهوب ونسعد دائمًا بالعمل معه.'
           },
           quoteAuthor: {
             en: 'Rosa Ferry',
-            ar: 'نافع حاتم'
           },
           jobTitle: {
             en: 'Sales Manager',
-            ar: 'مدير مبيعات'
           }
         }, {
           imgUrl: 'https://via.placeholder.com/200',
           quoteContent: {
             en: 'Nafie team is very professional, always delivers high quality results, and is always there to help. Look forward to working with Nafie in other projects.',
-            ar: 'محمد مطور محترف للغاية يقدم دائمًا نتائج عالية الجودة ، وهو دائمًا موجود للمساعدة. نتطلع إلى العمل معه في مشاريع أخرى.'
           },
           quoteAuthor: {
             en: 'Keshaun Robel',
-            ar: 'صدقي الطويل'
           },
           jobTitle: {
             en: 'CEO, Designer',
-            ar: 'أخصائي SEO'
           }
         }, {
           imgUrl: 'https://via.placeholder.com/200',
           quoteContent: {
             en: 'Excellent Team to work with. Always positive to find the most appropriate solution. Nafie is one of the professional web development agency that provides awesome services.',
-            ar: 'فريق ممتاز للعمل معه. إيجابي دائمًا للعثور على الحل الأنسب. هم إحدى شركات تطوير الويب المحترفة التي تقدم خدمات رائعة.'
           },
           quoteAuthor: {
             en: 'Casper Paucek',
-            ar: 'حسان ادريس'
           },
           jobTitle: {
             en: 'Project Manager',
-            ar: 'مدير المشاريع'
           }
         }, {
           imgUrl: 'https://via.placeholder.com/200',
           quoteContent: {
             en: 'Nafie simply provides amazing web development service. Their team is extremely professional and the easiest to meet I have ever worked with. I would recommend Nafie to anyone.',
-            ar: 'محمد يقدم خدمات مذهلة في تطوير الويب، ولديه فريق محترف يجعل التعامل معهم مطمئن للغاية. أوصي بفريقهم للجميع.'
           },
           quoteAuthor: {
             en: 'Archibald Fadel',
-            ar: 'مجد الكافي'
           },
           jobTitle: {
             en: 'Photographer',
-            ar: 'مصور فوتوغرافي'
           }
         }, {
           imgUrl: 'https://via.placeholder.com/200',
           quoteContent: {
             en: 'Nafie simply provides amazing web development service. Their team is extremely professional and the easiest to meet I have ever worked with. I would recommend Nafie to anyone.',
-            ar: 'محمد يقدم خدمات مذهلة في تطوير الويب، ولديه فريق محترف يجعل التعامل معهم مطمئن للغاية. أوصي بفريقهم للجميع.'
           },
           quoteAuthor: {
             en: 'Tabitha Denesik',
-            ar: 'آسر بنسلامة'
           },
           jobTitle: {
             en: 'Photographer',
-            ar: 'مصور فوتوغرافي'
           }
         }, {
           imgUrl: 'https://via.placeholder.com/200',
           quoteContent: {
             en: 'Excellent Team to work with. Always positive to find the most appropriate solution. Nafie is one of the professional web development agency that provides awesome services.',
-            ar: 'فريق ممتاز للعمل معه. إيجابي دائمًا للعثور على الحل الأنسب. هم إحدى شركات تطوير الويب المحترفة التي تقدم خدمات رائعة.'
           },
           quoteAuthor: {
             en: 'Javon Bogan',
-            ar: 'صهيب الشريف'
           },
           jobTitle: {
             en: 'Project Manager',
-            ar: 'مدير المشاريع'
           }
         }, {
           imgUrl: 'https://via.placeholder.com/200',
           quoteContent: {
             en: 'Nafie team is very professional, always delivers high quality results, and is always there to help. Look forward to working with Nafie in other projects.',
-            ar: 'محمد مطور محترف للغاية يقدم دائمًا نتائج عالية الجودة ، وهو دائمًا موجود للمساعدة. نتطلع إلى العمل معه في مشاريع أخرى.'
           },
           quoteAuthor: {
             en: 'Duncan Kemmer',
-            ar: 'سيد كرم'
           },
           jobTitle: {
             en: 'CEO, Designer',
-            ar: 'أخصائي SEO'
           }
         }, {
           imgUrl: 'https://via.placeholder.com/200',
           quoteContent: {
             en: 'Nafie worked on a handful of projects for us and has always exceeded our expectations. Nafie team is dedicated, talented and a delight to work with.',
-            ar: 'عمل محمد في عدد كبير من المشاريع لأجلنا وكان دائمًا يفوق توقعاتنا. مطور متخصص وموهوب ونسعد دائمًا بالعمل معه.'
           },
           quoteAuthor: {
             en: 'Coy Johns',
-            ar: 'هيثم الشريف'
           },
           jobTitle: {
             en: 'Sales Manager',
-            ar: 'مدير مبيعات'
           }
         }, {
           imgUrl: 'https://via.placeholder.com/200',
           quoteContent: {
             en: 'I know I can count on your service if I need my project done fast and with the best possible result. I am a regular customer and hope to continue our work!',
-            ar: 'يمكنني الاعتماد على خدمات محمد دائمًا وخاصة إذا كنت بحاجة إلى إنجاز مشروعي في أقل وقت وبأفضل نتيجة ممكنة. أنا عميل منتظم لديه وآمل أن نواصل عملنا معا دائمًا.'
           },
           quoteAuthor: {
             en: 'Murphy Roberts',
-            ar: 'إسلام مصطفى'
           },
           jobTitle: {
             en: 'Art Director',
-            ar: 'آرت دايركتور'
           }
         }, {
           imgUrl: 'https://via.placeholder.com/200',
           quoteContent: {
             en: 'Muhammad was a real pleasure to work with and we look forward to working with him again. He’s definitely the kind of developer you can trust with a project from start to finish.',
-            ar: 'أنا سعيد حقًا بالعمل مع محمد وأتطلع إلى العمل معه مرة أخرى قريبا. هو بالتأكيد من المطورين الذي يمكنك الوثوق بهم للعمل على مشروعك من البداية إلى النهاية.'
           },
           quoteAuthor: {
             en: 'Dimitri Lockman',
-            ar: 'وسيم السقا'
           },
           jobTitle: {
             en: 'Motion Graphic Animator',
-            ar: 'مصمم موشن جرافيك'
           }
         }]
       };
@@ -2714,7 +2512,7 @@ export default defineComponent({
       changeAppTheme() {
         this.savedTheme === 'light_theme' ? this.savedTheme = 'dark_theme' : this.savedTheme = 'light_theme'; // save the new theme in the localStorage
 
-        localStorage.setItem('nafieSavedTheme', this.savedTheme);
+        localStorage.setItem('JBearSavedTheme', this.savedTheme);
       },
 
       // toggle nav menu
@@ -3216,4 +3014,5 @@ export default defineComponent({
 @import 'src/styles/main.css';
 @import 'src/styles/bootstrap.css';
 @import 'src/styles/libraries.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@300&family=Saira+Stencil+One&display=swap');
 </style>

@@ -1,7 +1,6 @@
 var express = require("express");
 require('dotenv').config();
 var bodyParser = require("body-parser");
-// const movie = require("./controllers/movies.controller");
 const cors = require('cors');
 const app = express();
 const port = process.env.PORT;
