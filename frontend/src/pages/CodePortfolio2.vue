@@ -37,8 +37,8 @@ import ParseWP from "../../services/parseWP"
 export default defineComponent({
   name: 'LoginPage',
   data() {
-    const $q = useQuasar();
-    $q.dark.set(true);
+    // const $q = useQuasar();
+    // $q.dark.set(true);
     return {
       image: '',
       posts: [],

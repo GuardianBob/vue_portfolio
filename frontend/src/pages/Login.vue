@@ -39,8 +39,8 @@ import { useQuasar, Notify } from "quasar";
 export default defineComponent({
   name: 'LoginPage',
   data() {
-    const $q = useQuasar();
-    $q.dark.set(true);
+    // const $q = useQuasar();
+    // $q.dark.set(true);
     return {
     };
   },

@@ -141,8 +141,8 @@ export default defineComponent({
   },
 
   data() {
-    const $q = useQuasar();
-    $q.dark.set(true);
+    // const $q = useQuasar();
+    // $q.dark.set(true);
     return {
       // flag to toggle nav menu
       isNavMenuOpen: false,

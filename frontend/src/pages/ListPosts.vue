@@ -13,7 +13,7 @@
               <span v-else class="card-image"></span>
               
               <q-card-section>
-                <div class="text-h6" :link="'/post/' + post.id">{{ post.title.rendered }}</div>
+                <div class="text-h6" style="color: black;" :link="'/post/' + post.id">{{ post.title.rendered }}</div>
                 <!-- <div :id="post.id"></div> -->
               </q-card-section>
             </q-card>
@@ -37,8 +37,8 @@ import ParseWP from "../../services/parseWP"
 export default defineComponent({
   name: 'LoginPage',
   data() {
-    const $q = useQuasar();
-    $q.dark.set(true);
+    // const $q = useQuasar();
+    // $q.dark.set(true);
     return {
       image: '',
       posts: [],
