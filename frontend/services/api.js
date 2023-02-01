@@ -17,6 +17,10 @@ class APIService {
   get_media(id) {
     return api.get(`/media/${id}`);
   }
+
+  get_tags() {
+    return api.get(`/tags`, );
+  }
 }
 
 export default new APIService();
