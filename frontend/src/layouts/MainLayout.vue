@@ -164,8 +164,12 @@ export default defineComponent({
 
     set_dark() {
       const div = document.querySelector('body')
+      const nav = document.querySelector('aside')
       div.classList.remove('body--light')
       div.classList.add('body--dark')
+      // nav.classList.remove('body--light')
+      nav.classList.add('q-drawer--dark')
+      nav.classList.add('q-dark')
       this.savedTheme = 'dark_theme'
       this.toggle_color = 'grey-10'
       this.toggle_value = true
@@ -174,6 +178,8 @@ export default defineComponent({
 
     set_light() {
       const div = document.querySelector('body')
+      // const nav = document.querySelector('aside')
+      // nav.classList.remove('q-drawer--dark q-dark')
       div.classList.remove('body--dark')
       div.classList.add('body--light')
       this.savedTheme = 'light_theme'
