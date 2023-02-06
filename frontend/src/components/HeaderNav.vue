@@ -159,31 +159,26 @@ export default defineComponent({
         url: '#hero',
         title: {
           en: 'Home',
-          ar: 'الرئيسية'
         }
       }, {
         url: '#about',
         title: {
           en: 'About',
-          ar: 'من أنا'
         }
       }, {
         url: '#skills',
         title: {
           en: 'Skills',
-          ar: 'مهاراتي'
         }
       }, {
         url: '#portfolio',
         title: {
           en: 'Portfolio',
-          ar: 'أعمالي'
         }
       }, {
         url: '#contact',
         title: {
           en: 'Contact',
-          ar: 'اتصل بي'
         }
       }],
     };
