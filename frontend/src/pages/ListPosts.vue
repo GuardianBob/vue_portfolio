@@ -1,20 +1,10 @@
 <template>
   <q-page>
     <div class="q-pa-md row items-start">
-      <div class="col-12">
-        <span v-for="tag in tags" :key="tag.id" >
-          <q-chip removable v-model="tag.value" @remove="update_list()" color="primary" text-color="white">
-            {{ tag.name }}
-          </q-chip>
-        </span>
-        <br>
-        <q-btn @click="reset_tags">reset</q-btn>
-      </div>
+        <q-btn label="Filter Posts" color="secondary" @click="filter = true" />
     </div>
-      <div class="row justify-center text-center q-pa-sm">
-      <!-- <div class="col-10 q-mt-xl"> -->
-        <!-- <div class="col-lg-10" style="width: 30%; max-width: 350px" v-for="post in posts" :key="post.id"> -->
-        <div class="col-lg-4 col-md-4 col-sm-10 q-pa-sm" v-for="post in display_posts" :key="post.id">
+      <div class="row justify-center text-center q-px-sm">
+        <div class="col-lg-4 col-md-4 col-sm-6 q-pa-sm" v-for="post in display_posts" :key="post.id">
           <router-link :to="'/post/' + post.id">
             <q-card class="list-card dark" >
               <span v-if="post.featured_media !== 0">
@@ -24,22 +14,36 @@
               
               <q-card-section >
                 <div class="text-h6 dark" :link="'/post/' + post.id">{{ post.title.rendered }}</div>
-                <!-- <div :id="post.id"></div> -->
               </q-card-section>
             </q-card>
           </router-link>
-
         </div>
-
-        <!-- <div class="col" id="post"></div> -->
-      <!-- </div> -->
       </div>
-    <!-- </div> -->
+    <q-dialog v-model="filter" persistent>
+      <q-card style="min-width: 350px">
+        <q-card-section>
+          <div class="text-h6">Select Filters</div>
+        </q-card-section>
+    
+        <q-card-section class="q-pt-none">
+          <span v-for="tag in tags" :key="tag.id">
+            <q-chip :selected="tag.value" @click="update_tags(tag)" color="primary" text-color="white">
+              {{ tag.name }}
+            </q-chip>
+          </span>
+          <br>
+        </q-card-section>
+        <q-card-actions align="right" class="text-primary">
+          <q-btn flat label="Done" v-close-popup />
+          <q-btn @click="reset_tags" color="warning">reset</q-btn>
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
   </q-page>
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue'
+import { defineComponent, ref, reactive, computed } from 'vue'
 import { useQuasar, Notify } from "quasar"
 import APIService from "../../services/api"
 import ParseWP from "../../services/parseWP"
@@ -60,11 +64,20 @@ export default defineComponent({
   setup() {
     return {
       tags: ref([]),
+      tags2: ref([]),
       tag_ids: [],
       tag_names: [],
+      filter: ref(false),
+      // selection: computed(() => {
+      //   console.log(Object.keys(tags2))
+      //   return Object.keys(tags2)
+      //   //   .filter(type => desert[type] === true)
+      //   //   .join(', ')
+      // })
     }
   },
   computed: {
+
   },
 
   methods: {
@@ -84,8 +97,8 @@ export default defineComponent({
     },
 
     reset_tags() {
-      this.tags.map((tag) => tag.value = true)
-      this.update_list()
+      this.tags.map((tag) => tag.value = false)
+      this.display_posts = this.posts
     },
 
     async get_tags(posts) {
@@ -101,9 +114,10 @@ export default defineComponent({
         this.tags.push({
           "id": tag.id,
           "name": tag.name,
-          "value": true
+          "value": false
         })
         this.tag_names.push(tag.name)
+        this.tags2 = this.tags
       })
       // console.log(this.tags, this.tag_names)
     },
@@ -126,6 +140,16 @@ export default defineComponent({
       })
       // console.log(new_posts)
       this.display_posts = new_posts
+    },
+
+    async update_tags(selected) {
+      console.log(selected.name, selected.value)
+      await this.tags.map((tag) => {
+        if (tag.id == selected.id) {
+          return tag.value = !tag.value
+        }
+      })
+      this.update_list()
     },
 
     async get_image(id) {
