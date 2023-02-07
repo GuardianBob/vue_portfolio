@@ -3,22 +3,30 @@
     <div class="q-pa-md row items-start">
         <q-btn label="Filter Posts" color="secondary" @click="filter = true" />
     </div>
-      <div class="row justify-center text-center q-px-sm">
-        <div class="col-lg-4 col-md-4 col-sm-6 q-pa-sm" v-for="post in display_posts" :key="post.id">
-          <router-link :to="'/post/' + post.id">
-            <q-card class="list-card dark" >
-              <span v-if="post.featured_media !== 0">
-                <img :src="post.featured_media" class="card-image" >
-              </span>
-              <span v-else class="card-image"></span>
-              
-              <q-card-section >
-                <div class="text-h6 dark" :link="'/post/' + post.id">{{ post.title.rendered }}</div>
-              </q-card-section>
-            </q-card>
-          </router-link>
-        </div>
+    <!-- <div>
+      <q-btn label="secondary" color="secondary"/>
+      <q-btn label="accent" color="accent" />
+      <q-btn label="positive" color="positive" />
+      <q-btn label="negative" color="negative" />
+      <q-btn label="info" color="info" />
+      <q-btn label="warning" color="warning" />
+    </div> -->
+    <div class="row justify-center text-center q-px-sm">
+      <div class="col-lg-4 col-md-4 col-sm-6 q-pa-sm" v-for="post in display_posts" :key="post.id">
+        <router-link :to="'/post/' + post.id">
+          <q-card class="list-card dark" >
+            <span v-if="post.featured_media !== 0">
+              <img :src="post.featured_media" class="card-image" >
+            </span>
+            <span v-else class="card-image"></span>
+            
+            <q-card-section >
+              <div class="text-h6 dark" :link="'/post/' + post.id">{{ post.title.rendered }}</div>
+            </q-card-section>
+          </q-card>
+        </router-link>
       </div>
+    </div>
     <q-dialog v-model="filter" persistent>
       <q-card style="min-width: 350px">
         <q-card-section>
@@ -27,7 +35,7 @@
     
         <q-card-section class="q-pt-none">
           <span v-for="tag in tags" :key="tag.id">
-            <q-chip :selected="tag.value" @click="update_tags(tag)" color="primary" text-color="white">
+            <q-chip :selected="tag.value" @click="update_tags(tag)" color="accent" text-color="white">
               {{ tag.name }}
             </q-chip>
           </span>
