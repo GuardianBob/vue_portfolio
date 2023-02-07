@@ -1,6 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header>
+    <!-- <q-header>       -->
+    <q-header style="background-color: #121212;">
       <q-toolbar>
         <q-btn
           flat
@@ -64,20 +65,20 @@ const linksList = [
     // caption: 'quasar.dev',
     icon: 'home',
     link: '/',
-    target: '_self'
+    target: '_self',
   },
   {
     title: 'Coding',
     caption: 'Software projects and demos',
     icon: 'mdi-file-code-outline',
-    link: '/',
+    link: '/coding',
     target: '_self'
   },
   {
     title: 'Workshop',
     caption: 'Woodworking projects and more',
     icon: 'mdi-saw-blade',
-    link: '/',
+    link: '/workshop',
     target: '_self'
   },
   {
