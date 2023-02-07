@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import { defineComponent, ref, reactive, computed } from 'vue'
+import { defineComponent, ref } from 'vue'
 import { useQuasar, Notify } from "quasar"
 import APIService from "../../services/api"
 import ParseWP from "../../services/parseWP"
@@ -68,12 +68,6 @@ export default defineComponent({
       tag_ids: [],
       tag_names: [],
       filter: ref(false),
-      // selection: computed(() => {
-      //   console.log(Object.keys(tags2))
-      //   return Object.keys(tags2)
-      //   //   .filter(type => desert[type] === true)
-      //   //   .join(', ')
-      // })
     }
   },
   computed: {
@@ -139,11 +133,11 @@ export default defineComponent({
         // console.log(found)
       })
       // console.log(new_posts)
-      this.display_posts = new_posts
+      new_posts.length > 0 ? this.display_posts = new_posts : this.display_posts = this.posts
     },
 
     async update_tags(selected) {
-      console.log(selected.name, selected.value)
+      // console.log(selected.name, selected.value)
       await this.tags.map((tag) => {
         if (tag.id == selected.id) {
           return tag.value = !tag.value
