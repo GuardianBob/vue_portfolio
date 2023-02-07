@@ -14,15 +14,26 @@
 
 // $primary   : #E98C1D;
 $primary : #e47d00;
+// $primary : linear-gradient(135deg, #ff8c00 0%, #633600 100%);
 // $primary   : #FD7014;
-$secondary : #003865;
-// $secondary : #0868AB;
-$accent    : #FF4301;
+// $secondary : #003865;
+$secondary : #353535;
+// $secondary : linear-gradient(135deg, #727277 0%, #19191d 100%);
+$accent    : #e44c0f;
+// $accent : linear-gradient(135deg, #E98C1D 0%, #C72800 100%);
 
 $dark      : #1D1D1D;
 $dark-page : #121212;
 
-$positive  : #3CCF4E;
-$negative  : #C10015;
-$info      : #0A91AB;
-$warning   : #7D1935;
+// $positive  : #019F02;
+$positive  : #198516;
+// $positive : linear-gradient(135deg, #9ED400 0%, #024A3F 100%);
+// $negative  : #500E68;
+$negative  : #641780;
+// $negative : linear-gradient(135deg, #a32dce 0%, #2f0041 100%);
+// $info      : #016CAD;
+$info      : #2828da;
+// $info : linear-gradient(135deg, #3838e7 0%, #21212c 100%);
+// $warning   : #C10015;
+$warning   : #9b0012;
+// $warning : linear-gradient(135deg, #eb001b 0%, #52000a 100%);
