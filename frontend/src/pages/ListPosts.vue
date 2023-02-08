@@ -1,7 +1,7 @@
 <template>
   <q-page>
     <div class="q-pa-md row items-start">
-        <q-btn label="Filter Posts" color="secondary" @click="filter = true" />
+        <q-btn label="Filter Posts" color="primary" @click="filter = true" />
     </div>
     <!-- <div>
       <q-btn label="secondary" color="secondary"/>
@@ -12,9 +12,9 @@
       <q-btn label="warning" color="warning" />
     </div> -->
     <div class="row justify-center text-center q-px-sm">
-      <div class="col-lg-4 col-md-4 col-sm-6 q-pa-sm" v-for="post in display_posts" :key="post.id">
+      <div class="col-lg-3 col-md-4 col-sm-6 q-pa-sm" v-for="post in display_posts" :key="post.id">
         <router-link :to="'/post/' + post.id">
-          <q-card class="list-card dark" >
+          <q-card class="list-card dark" style="background-color: #e47d00">
             <span v-if="post.featured_media !== 0">
               <img :src="post.featured_media" class="card-image" >
             </span>
@@ -76,6 +76,8 @@ export default defineComponent({
       tag_ids: [],
       tag_names: [],
       filter: ref(false),
+      category: '',
+      category_id: '',
     }
   },
   computed: {
@@ -83,8 +85,9 @@ export default defineComponent({
   },
 
   methods: {
+    
     async get_posts() {
-      await APIService.get_posts().then(async (results) => {
+      await APIService.get_posts(this.category_id).then(async (results) => {
         this.posts = results.data;
         this.display_posts = results.data;
         this.get_tags(results.data);
@@ -97,10 +100,19 @@ export default defineComponent({
         })
       })
     },
-
+    
     reset_tags() {
       this.tags.map((tag) => tag.value = false)
       this.display_posts = this.posts
+    },
+
+    async get_categories() {
+      let categories = await APIService.get_categories();
+      categories.data.map((cat) => {
+        if (cat.slug == this.category) {
+          this.category_id = cat.id
+        }
+      });
     },
 
     async get_tags(posts) {
@@ -113,14 +125,16 @@ export default defineComponent({
       // console.log(tag_ids)
       let tags = await APIService.get_tags();
       tags.data.map((tag) => {
-        this.tags.push({
-          "id": tag.id,
-          "name": tag.name,
-          "value": false
-        })
-        this.tag_names.push(tag.name)
-        this.tags2 = this.tags
+        if (tag_ids.includes(tag.id)) {
+          this.tags.push({
+            "id": tag.id,
+            "name": tag.name,
+            "value": false
+          })
+          this.tag_names.push(tag.name)
+        }
       })
+      this.tags2 = this.tags
       // console.log(this.tags, this.tag_names)
     },
 
@@ -162,7 +176,11 @@ export default defineComponent({
   },
 
   created() {
-    this.get_posts();
+    this.category = window.location.pathname.split("/").pop();
+    this.get_categories().then(() => {
+      this.get_posts()
+    }
+    )
   },
   updated() {
   },
