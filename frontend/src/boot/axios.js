@@ -17,7 +17,7 @@ let HTTP = ''
 if (process.env.DEV_ENV == "true") {
   HTTP = `http://${process.env.REST_API_HOST}/${process.env.WP_POSTS_API}`
 } else {
-  HTTP = `https://${process.env.REST_API_HOST}/${process.env.WP_POSTS_API}`
+  HTTP = `https://${process.env.REST_API_LIVE_HOST}/${process.env.WP_POSTS_API}`
 }
 const api = axios.create({
   // baseURL: 'https://api.example.com'
