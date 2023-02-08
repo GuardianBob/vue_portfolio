@@ -58,8 +58,8 @@
                     I love making things simple, intuitive and expertly crafted!
                   </p>
                   <h4 class="block-title">
-                    Product is the vital essence of what i do, truly great product is born of meticulous planning and
-                    process. This is where i specialized!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                    molestiae quas vel...
                   </h4>
                 </div>
   
@@ -68,25 +68,25 @@
                   <li class="col-lg-4">
                     <h4 class="block-title">Email</h4>
                     <ul>
-                      <li><a href="mailto:info@nafie.com">info@nafie.com</a></li>
-                      <li><a href="mailto:support@nafie.com">support@nafie.com</a></li>
+                      <li><a href="mailto:#">test@mail.com</a></li>
+                      <li><a href="mailto:#">test@mail.com</a></li>
                     </ul>
                   </li>
                   <li class="col-lg-4">
-                    <h4 class="block-title">Address</h4>
+                    <h4 class="block-title">Location</h4>
                     <ul>
                       <li>
-                        941 saqrqorish Road, alandalos,
+                        Seattle
                         <br>
-                        grnata, wa 47122-4194
+                        Washington
                       </li>
                     </ul>
                   </li>
                   <li class="col-lg-4">
                     <h4 class="block-title">Phone</h4>
                     <ul>
-                      <li><a href="tel:02966202290">(02) 966 202 290</a></li>
-                      <li><a href="tel:02966202291">(02) 966 202 291</a></li>
+                      <li><a href="tel:#">555.555.5555</a></li>
+                      <li><a href="tel:#">555.555.5555</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -244,11 +244,13 @@
                   I can Help You!
                 </h2>
                 <p>
-                  Hi! I’m Muhammad Mabrouk, and I’m a developer who has passion for building clean web applications with
-                  intuitive functionality. I enjoy the process of turning ideas into reality using creative solutions. I’m
-                  always curious about learning new skills, tools, and concepts. In addition to working on various solo
-                  full stack projects, I have worked with creative teams, which involves daily stand-ups and
-                  communications, source control, and project management.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                  molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                  numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                  optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
+                  obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
+                  nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
+                  tenetur error, harum nesciunt ipsum debitis quas aliquid.
                 </p>
                 <div class="btns-container">
                   <a href="#contact" class="btn btn-primary">Hire Me</a>
@@ -358,9 +360,13 @@
                   With Multiple Degrees and Certifications!
                 </h2>
                 <p>
-                  I have been developing sites and apps for {{ experienceYears }} years and i know for sure the main
-                  trends and directions of modern design, I have been a visionary and a reliable software engineering
-                  partner for world-class brands. You will get a decent result as you expect.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                  molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                  numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                  optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
+                  obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
+                  nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
+                  tenetur error, harum nesciunt ipsum debitis quas aliquid.
                 </p>
               </div>
             </div>
@@ -501,8 +507,8 @@
                       <div>
                         <strong>Email:</strong>
                         <ul>
-                          <li><a href="mailto:info@nafie.com">info@nafie.com</a></li>
-                          <li><a href="mailto:support@nafie.com">support@nafie.com</a></li>
+                          <li><a href="mailto:#">test@mail.com</a></li>
+                          <li><a href="mailto:#">test@mail.com</a></li>
                         </ul>
                       </div>
                     </li>
@@ -2484,7 +2490,7 @@ export default defineComponent({
       // get a theme to use
       getAppTheme() {
         // get the saved theme from the localStorage
-        const storageSavedTheme = localStorage.getItem('nafieSavedTheme'); // Check to see if there a saved theme
+        const storageSavedTheme = localStorage.getItem('JBearSavedTheme'); // Check to see if there a saved theme
 
         if (storageSavedTheme) {
           this.savedTheme = storageSavedTheme;
@@ -2505,7 +2511,7 @@ export default defineComponent({
         } // save the new theme in the localStorage
 
 
-        localStorage.setItem('nafieSavedTheme', this.savedTheme);
+        localStorage.setItem('JBearSavedTheme', this.savedTheme);
       },
 
       // detect the theme changes
