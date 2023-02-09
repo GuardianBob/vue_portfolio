@@ -33,7 +33,7 @@
         <div class="container">
           <!-- logo -->
           <div class="logo" title="Jesse">
-            <h1><a href="index.html">Jesse</a></h1>
+            <h1><a href="/">Jesse</a></h1>
           </div>
   
           <!-- nav links -->

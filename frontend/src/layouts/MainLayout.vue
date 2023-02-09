@@ -12,9 +12,10 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title>
+        <q-toolbar-title class="q-pt-xs">
+          <img alt="JBear logo" src="~assets/JBear_Logo_Header_Saw.png" style="width: 50px;" class="saw" @mouseenter="spin_saw" @click="spin_saw">
           <a href="/">
-            <img alt="JBear logo" src="~assets/JBear_Logo_Header.png" style="width: 200px;" class="q-pt-xs">
+            <img alt="JBear logo" src="~assets/JBear_Logo_Header_Text.png" style="width: 200px;" >
           </a>
         </q-toolbar-title>
       </q-toolbar>
@@ -70,17 +71,17 @@ const linksList = [
     target: '_self',
   },
   {
-    title: 'Coding',
-    caption: 'Software projects and demos',
-    icon: 'mdi-file-code-outline',
-    link: '/coding',
-    target: '_self'
-  },
-  {
     title: 'Workshop',
     caption: 'Woodworking projects and more',
     icon: 'mdi-saw-blade',
     link: '/workshop',
+    target: '_self'
+  },
+  {
+    title: 'Coding',
+    caption: 'Software projects and demos',
+    icon: 'mdi-file-code-outline',
+    link: '/coding',
     target: '_self'
   },
   {
@@ -121,6 +122,7 @@ export default defineComponent({
       essentialLinks: linksList,
       leftDrawerOpen,
       version: version,
+      saw: 0,
       toggle_value: ref(false),
       toggle_color: ref("white"),
       toggleLeftDrawer () {
@@ -163,6 +165,15 @@ export default defineComponent({
       this.savedTheme === 'light_theme' ? this.set_dark() : this.set_light(); // toggle theme
       localStorage.setItem('JBearSavedTheme', this.savedTheme);
       console.log("clicked")
+    },
+
+    async spin_saw() {
+      console.log("spin!")
+      this.saw = this.saw - 3600
+      gsap.to(".saw", {
+        duration: 1,
+        rotation: this.saw
+      });
     },
 
     set_dark() {
