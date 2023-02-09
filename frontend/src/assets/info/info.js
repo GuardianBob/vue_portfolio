@@ -112,78 +112,78 @@ export const experienceItems = [{
 ]
 
 export const skillsItems = [{
-    imgUrl: 'src/assets/images/skills/Python.png',
+    imgUrl: './src/assets/images/skills/python.png',
     title: 'Python'
   }, {
-    imgUrl: 'src/assets/images/skills/JavaScript.png',
+    imgUrl: './src/assets/images/skills/javascript.png',
     title: 'JavaScript'
   }, {
-    imgUrl: 'src/assets/images/skills/html5.png',
+    imgUrl: './src/assets/images/skills/html5.png',
     title: 'HTML5'
   }, {
-    imgUrl: 'src/assets/images/skills/CSS3.png',
+    imgUrl: './src/assets/images/skills/css3.png',
     title: 'CSS3'
   }, {
-    imgUrl: 'src/assets/images/skills/Vue.png',
+    imgUrl: './src/assets/images/skills/vue.png',
     title: 'Vue'
   }, {
-    imgUrl: 'src/assets/images/skills/Django.png',
+    imgUrl: './src/assets/images/skills/django.png',
     title: 'Django'
   }, {
-    imgUrl: 'src/assets/images/skills/jQuery.png',
+    imgUrl: './src/assets/images/skills/jquery.png',
     title: 'jQuery'
   }, {
-    imgUrl: 'src/assets/images/skills/Bootstrap.png',
+    imgUrl: './src/assets/images/skills/bootstrap.png',
     title: 'Bootstrap'
   }, {
-    imgUrl: 'src/assets/images/skills/React.png',
+    imgUrl: './src/assets/images/skills/react.png',
     title: 'React'
   }, {
-    imgUrl: 'src/assets/images/skills/SQL.png',
+    imgUrl: './src/assets/images/skills/sql.png',
     title: 'SQL'
   }, {
-    imgUrl: 'src/assets/images/skills/Firebase.png',
+    imgUrl: './src/assets/images/skills/firebase.png',
     title: 'Firebase'
   }, {
-    imgUrl: 'src/assets/images/skills/SASS.png',
+    imgUrl: './src/assets/images/skills/sass.png',
     title: 'SASS'
   }
 ]
 
 export const toolsItems = [{
-    imgUrl: 'src/assets/images/skills/Ajax.png',
+    imgUrl: './src/assets/images/skills/ajax.png',
     title: 'Ajax'
   }, {
-    imgUrl: 'src/assets/images/skills/Postgres.png',
+    imgUrl: './src/assets/images/skills/postgres.png',
     title: 'Postgres'
   }, {
-    imgUrl: 'src/assets/images/skills/Webpack.png',
+    imgUrl: './src/assets/images/skills/webpack.png',
     title: 'Webpack'
   }, {
-    imgUrl: 'src/assets/images/skills/git.png',
+    imgUrl: './src/assets/images/skills/git.png',
     title: 'Git (Github)'
   }, {
-    imgUrl: 'src/assets/images/skills/Npm.png',
+    imgUrl: './src/assets/images/skills/npm.png',
     title: 'Npm'
   }, {
-    imgUrl: 'src/assets/images/skills/command.png',
+    imgUrl: './src/assets/images/skills/command.png',
     title: 'Command Line'
   }, {
-    imgUrl: 'src/assets/images/skills/vs-code.png',
+    imgUrl: './src/assets/images/skills/vs-code.png',
     title: 'VS Code'
   }, {
-    //   imgUrl: 'src/assets/images/skills/Trello.png',
+    //   imgUrl: './src/assets/images/skills/Trello.png',
     //   title: 'Trello'
     // }, {
-    //   imgUrl: 'src/assets/images/skills/ClickUp.png',
+    //   imgUrl: './src/assets/images/skills/ClickUp.png',
     //   title: 'ClickUp'
     // }, {
-    imgUrl: 'src/assets/images/skills/Slack.png',
+    imgUrl: './src/assets/images/skills/slack.png',
     title: 'Slack'
   }, {
-    imgUrl: 'src/assets/images/skills/Photoshop.png',
+    imgUrl: './src/assets/images/skills/photoshop.png',
     title: 'Photoshop'
   }, {
-    imgUrl: 'src/assets/images/skills/Illustrator.png',
+    imgUrl: './src/assets/images/skills/illustrator.png',
     title: 'Adobe Illustrator'
 }]

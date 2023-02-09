@@ -11,7 +11,7 @@
       <div class="preloader" ref="preloader">
         <div class="row preloader-content justify-center">
           <div class="logo">
-            <img src="src/assets/JBear_Logo_No_Letters_White.svg" alt="JBear Creations Logo">
+            <img src="~assets/JBear_Logo_No_Letters_White.svg" alt="JBear Creations Logo">
             <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 199">
               <path
                 d="M0.720001 8.91999V0.855993H58.32L169.488 190.648V199H112.176L0.720001 8.91999ZM114.768 73.144V0.855993H169.488V166.744L114.768 73.144ZM0.720001 32.824L55.44 126.424V199H0.720001V32.824Z" />
@@ -33,7 +33,7 @@
         <div class="container">
           <!-- logo -->
           <div class="logo" title="Jesse">
-            <h1><a href="index.html">Jesse</a></h1>
+            <h1><a href="/">Jesse</a></h1>
           </div>
   
           <!-- nav links -->
@@ -137,8 +137,8 @@
       <!-- start of hero section -->
       <div id="hero" class="hero-section hide-in-preloading" data-paneffect="true" ref="heroSection">
         <div class="hero-img">
-          <div class="layer"><img src="src/assets/images/profile_02.png" alt="Jesse"></div>
-          <div class="layer"><img src="src/assets/images/profile_02.png" alt="Jesse"></div>
+          <div class="layer"><img src="~assets/images/profile_02.png" alt="Jesse"></div>
+          <div class="layer"><img src="~assets/images/profile_02.png" alt="Jesse"></div>
         </div>
   
         <div class="hero-text">
@@ -184,7 +184,7 @@
               <li class="col-sm-12 col-md-6 col-lg-4">
                 <a href="#experience">
                   <div class="icon">
-                    <img src="src/assets/images/icons/emblem.png" alt="Years of Experience">
+                    <img src="~assets/images/icons/emblem.png" alt="Years of Experience">
                   </div>
                   <div class="text">
                     <h3>{{ experienceYears }}+</h3>
@@ -196,7 +196,7 @@
               <li class="col-sm-12 col-md-6 col-lg-4">
                 <a href="#portfolio">
                   <div class="icon">
-                    <img src="src/assets/images/icons/check-mark.png" alt="Completed Projects">
+                    <img src="~assets/images/icons/check-mark.png" alt="Completed Projects">
                   </div>
                   <div class="text">
                     <h3>15+</h3>
@@ -208,7 +208,7 @@
               <li class="col-sm-12 col-md-6 col-lg-4">
                 <a href="#testimonials">
                   <div class="icon">
-                    <img src="src/assets/images/icons/happy.png" alt="Happy Clients">
+                    <img src="~assets/images/icons/happy.png" alt="Happy Clients">
                   </div>
                   <div class="text">
                     <h3>95+</h3>
@@ -230,8 +230,8 @@
   
             <!-- about image -->
             <div class="about-img col-lg-6">
-              <div class="layer"><img src="src/assets/images/profile_01.png" alt="Jesse"></div>
-              <div class="layer"><img src="src/assets/images/profile_01.png" alt="Jesse"></div>
+              <div class="layer"><img src="~assets/images/profile_01.png" alt="Jesse"></div>
+              <div class="layer"><img src="~assets/images/profile_01.png" alt="Jesse"></div>
             </div>
   
             <!-- text box -->
@@ -327,10 +327,10 @@
             <div class="col-lg-6">
               <div class="experience-timeline">
                 <div class="timepath" ref="experienceTimepath">
-                  <!-- <span class="line"></span> -->
+                  <span class="line"></span>
                   <div v-for="line in experienceChunks" :key="line">
-                    <!-- <span class="semicircle"></span> -->
-                    <!-- <span class="line"></span> -->
+                    <span class="semicircle"></span>
+                    <span class="line"></span>
                 </div>
                 </div>
   
@@ -486,14 +486,14 @@
               <!-- contact info -->
               <!-- <ul class="contact-info">
                     <li>
-                      <img src="src/assets/images/icons/address.png" alt="Address">
+                      <img src="~assets/images/icons/address.png" alt="Address">
                       <div>
                         <strong>Address:</strong>
                         941 Saqrqorish Road, alandalos, grnata, wa 47122-4194
                       </div>
                     </li>
                     <li>
-                      <img src="src/assets/images/icons/phone.png" alt="Phone">
+                      <img src="~assets/images/icons/phone.png" alt="Phone">
                       <div>
                         <strong>Phone:</strong>
                         <ul>
@@ -503,7 +503,7 @@
                       </div>
                     </li>
                     <li>
-                      <img src="src/assets/images/icons/email.png" alt="Email">
+                      <img src="~assets/images/icons/email.png" alt="Email">
                       <div>
                         <strong>Email:</strong>
                         <ul>
@@ -661,7 +661,7 @@ import { useQuasar, Notify } from "quasar"
 import APIService from "../../services/api"
 import ParseWP from "../../services/parseWP"
 import { experienceItems, skillsItems, toolsItems } from 'src/assets/info/info'
-// import 'src/scripts/plugins.min'
+import { gsap } from "gsap";
 
 var animationsMixin = {
   mounted() {
@@ -1104,7 +1104,8 @@ var animationsMixin = {
 export default defineComponent({
 
   /* ------------------------------------- */
-    mixins: [animationsMixin],
+  mixins: [animationsMixin],
+    
 
     data() {
       return {
@@ -3017,8 +3018,42 @@ export default defineComponent({
 })
 </script>
 <style>
+@charset "UTF-8";
 @import 'src/styles/main.css';
 @import 'src/styles/bootstrap.css';
 @import 'src/styles/libraries.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@300&family=Saira+Stencil+One&display=swap');
+
+.experience-section .section-content .experience-timeline .timepath .semicircle {
+  display: block;
+  height: 87px;
+  width: 80px;
+  margin-top: -7px;
+  border-style: solid;
+  border-color: hsl(var(--border-color));
+}
+
+html[dir=ltr] .experience-section .section-content .experience-timeline .timepath .semicircle:nth-of-type(4n + 2) {
+  margin-left: auto;
+  border-width: 7px 7px 7px 0;
+  border-radius: 0 2em 2em 0;
+}
+
+html[dir=rtl] .experience-section .section-content .experience-timeline .timepath .semicircle:nth-of-type(4n + 2) {
+  margin-right: auto;
+  border-width: 7px 0 7px 7px;
+  border-radius: 2em 0 0 2em;
+}
+
+html[dir=ltr] .experience-section .section-content .experience-timeline .timepath .semicircle:nth-of-type(4n + 4) {
+  margin-right: auto;
+  border-width: 7px 0 7px 7px;
+  border-radius: 2em 0 0 2em;
+}
+
+html[dir=rtl] .experience-section .section-content .experience-timeline .timepath .semicircle:nth-of-type(4n + 4) {
+  margin-left: auto;
+  border-width: 7px 7px 7px 0;
+  border-radius: 0 2em 2em 0;
+}
 </style>

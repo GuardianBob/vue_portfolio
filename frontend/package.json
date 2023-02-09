@@ -11,17 +11,19 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "@quasar/cli": "^1.4.0",
-    "@quasar/extras": "^1.0.0",
+    "@quasar/cli": "^2.0.0",
+    "@quasar/extras": "^1.15.10",
     "axios": "^0.21.1",
     "dotenv": "^16.0.3",
+    "gsap": "^3.11.4",
     "pinia": "^2.0.11",
-    "quasar": "^2.6.0",
+    "quasar": "^2.11.5",
+    "scrolltrigger": "^1.0.1",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0"
   },
   "devDependencies": {
-    "@quasar/app-vite": "^1.0.0",
+    "@quasar/app-vite": "^1.2.0",
     "autoprefixer": "^10.4.2",
     "eslint": "^8.10.0",
     "eslint-config-prettier": "^8.1.0",

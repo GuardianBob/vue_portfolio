@@ -1,4 +1,5 @@
-(function() {
+import { gsap } from "gsap";
+(function () {
   'use strict';
 
   /* ------------------------------------- */

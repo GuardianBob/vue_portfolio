@@ -433,7 +433,7 @@ export default defineComponent({
 })
 </script>
 <style>
-@import 'src/styles/main.css';
+/* @import 'src/styles/main.css'; */
 @import 'src/styles/bootstrap.css';
 @import 'src/styles/libraries.min.css';
 </style>
