@@ -13,30 +13,32 @@
         />
 
         <q-toolbar-title>
-          <img alt="Quasar logo" src="~assets/JBear_Logo_Header.svg" style="width: 200px;" class="q-pt-xs">
+          <a href="/">
+            <img alt="JBear logo" src="~assets/JBear_Logo_Header.png" style="width: 200px;" class="q-pt-xs">
+          </a>
         </q-toolbar-title>
-        <q-toggle 
-          v-model="toggle_value" 
-          :color="toggle_color" 
-          size="lg"
-          @click="toggle_theme"
-          checked-icon="fa-solid fa-moon"
-          unchecked-icon="fa-solid fa-sun"
-        />
-        <div>v {{ version }}</div>
       </q-toolbar>
     </q-header>
-
+    
     <q-drawer
-      v-model="leftDrawerOpen"
-      bordered
+    v-model="leftDrawerOpen"
+    bordered
     >
-      <q-list>
-        <q-item-label
-          header
-        >
-          Essential Links
-        </q-item-label>
+    <q-list>
+      <q-item-label
+      header
+      >
+      
+    </q-item-label>
+    <q-toggle 
+      v-model="toggle_value" 
+      :color="toggle_color" 
+      size="lg"
+      @click="toggle_theme"
+      checked-icon="fa-solid fa-moon"
+      unchecked-icon="fa-solid fa-sun"
+    />
+    <span>v {{ version }}</span>
 
         <EssentialLink
           v-for="link in essentialLinks"
