@@ -1,13 +1,9 @@
 <template>
   <q-page class="flex flex-center">
     <div class="row flex flex-center q-mt-lg">
-      <img
-        alt="JBear Creations"
-        src="~assets/JBear_Logo_front_Orange.png"
-        style="width: 25%;"
-      >
-      <img alt="JBear Creations" src="~assets/JBear_Logo_Saw_Orange.png" style="width: 25%;" class="big-saw" @click="spin_saw">
-      <img alt="JBear Creations" src="~assets/JBear_Logo_back_Orange.png" style="width: 25%;">
+        <img alt="JBear Creations" src="~assets/JBear_Logo_front_Orange.png" style="width: 25%;">
+        <img alt="JBear Creations" src="~assets/JBear_Logo_Saw_Orange.png" style="width: 25%;" class="big-saw" @click="spin_saw">
+        <img alt="JBear Creations" src="~assets/JBear_Logo_back_Orange.png" style="width: 25%;">
     </div>
     <div>
     </div>
@@ -25,6 +21,7 @@ export default defineComponent({
     return {
       savedTheme: 'dark_theme',
       saw: 0,
+
     };
   },
   methods: {
@@ -36,9 +33,9 @@ export default defineComponent({
         rotation: this.saw
       });
     },
+
   },
   mounted() {
-    
   },
   
 })

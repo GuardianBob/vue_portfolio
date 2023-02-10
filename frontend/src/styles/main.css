@@ -2603,7 +2603,7 @@ footer .logo h1:focus-within {
           box-shadow: 0 0 0 2px hsla(var(--primary-color), 25%) inset;
   -webkit-transition: none;
   transition: none;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 html[dir=ltr] .scroll-to-top {
   right: 25px;
@@ -3188,7 +3188,7 @@ html[dir=rtl] .hero-section .scroll-down:after {
 }
 .statistics-section .section-content .statistics-items li {
   margin-bottom: 30px;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 .statistics-section .section-content .statistics-items li:nth-of-type(1) .icon {
   background-color: hsl(var(--bg-color-reverse));
