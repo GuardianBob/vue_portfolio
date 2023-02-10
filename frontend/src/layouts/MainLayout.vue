@@ -61,6 +61,7 @@ import { defineComponent, ref } from 'vue'
 import { useQuasar, colors } from "quasar";
 import EssentialLink from 'components/EssentialLink.vue'
 import { version } from '../../package.json'
+import { gsap } from "gsap";
 
 const linksList = [
   {
