@@ -165,10 +165,10 @@
             </li>
           </ul>
         </div>
-  
+<!--   
         <div class="scroll-down">
           <a href="#about" title="Scroll Down">Scroll</a>
-        </div>
+        </div> -->
       </div>
       <!-- end of hero section -->
   

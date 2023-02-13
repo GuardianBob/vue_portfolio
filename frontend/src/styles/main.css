@@ -880,7 +880,7 @@ body .page {
   }
 }
 .section .text-box-inline > * {
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 .section .text-box-inline .subtitle {
   text-transform: uppercase;
@@ -1611,7 +1611,7 @@ html[dir=rtl] .has-ultimate-tooltip .ultimate-tooltip-arrow {
 .has-ultimate-tooltip .ultimate-tooltip-arrow {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  visibility: hidden;
+  /* visibility: hidden; */
   opacity: 0;
 }
 .has-ultimate-tooltip:hover, .enable-focus-style .has-ultimate-tooltip:focus {
@@ -3284,14 +3284,14 @@ html[dir=rtl] .statistics-section .section-content .statistics-items a > .fa {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: -50px;
+  /* margin-bottom: -50px; */
 }
 .about-section .section-content > * {
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 .about-section .section-content .about-img {
   position: relative;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 @media (min-width: 992px) {
   .about-section .section-content .about-img {
@@ -3424,7 +3424,7 @@ html[dir=rtl] .about-section .section-content .about-img .layer:first-of-type:be
   -webkit-box-shadow: var(--card-shadow);
           box-shadow: var(--card-shadow);
   cursor: help;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 .skills-section .section-content .skills-items li .skill-icon img {
   display: block;
@@ -3493,7 +3493,7 @@ html[dir=rtl] .experience-section .section-content .experience-timeline .timepat
   right: 0;
 }
 .experience-section .section-content .experience-timeline .timepath span {
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 .experience-section .section-content .experience-timeline .timepath .line {
   display: block;
@@ -3567,7 +3567,7 @@ html[dir=rtl] .experience-section .section-content .experience-timeline .timepat
           justify-content: center;
   height: 30px;
   cursor: help;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 .experience-section .section-content .experience-timeline .timeline-items li:nth-of-type(6n + 4) {
   grid-column: 3;
@@ -3829,7 +3829,7 @@ html[dir=rtl] .portfolio-section .section-content .portfolio-items .works-filter
   bottom: 0;
   width: 100%;
   padding: 20px;
-  visibility: hidden;
+  /* visibility: hidden; */
   opacity: 0;
   -webkit-transition: 0.3s 0.2s;
   transition: 0.3s 0.2s;
@@ -3901,7 +3901,7 @@ html[dir=rtl] .portfolio-section .section-content .portfolio-items .works-filter
 }
 .testimonials-section .section-content .testimonials-items li .testimonials-item {
   cursor: help;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 .testimonials-section .section-content .testimonials-items li .testimonials-item img {
   display: block;
@@ -3986,7 +3986,7 @@ html[dir=rtl] .portfolio-section .section-content .portfolio-items .works-filter
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 .contact-section .section-content .contact-text .contact-info > li:not(:last-of-type) {
   margin-bottom: 20px;
@@ -4034,7 +4034,7 @@ html[dir=rtl] .contact-section .section-content .contact-text .social {
   padding-right: 42px;
 }
 .contact-section .section-content .contact-text .social li {
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 .contact-section .section-content .contact-text .social li a {
   display: -webkit-box;
@@ -4071,7 +4071,7 @@ html[dir=rtl] .contact-section .section-content .contact-text .social {
   border-radius: 0.63rem;
   -webkit-box-shadow: var(--card-shadow);
           box-shadow: var(--card-shadow);
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 @media (min-width: 768px) {
   .contact-section .section-content .contact-form {
