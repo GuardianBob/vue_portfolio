@@ -1,9 +1,10 @@
 <template>
   <q-page>
-    <div class="row justify-center text-center">
+    <div class="row justify-center">
       <div class="col-10" v-if="post">
-        <div class="col"><h3>{{ post.title.rendered }}</h3></div>
+        <div class="col text-center"><h3>{{ post.title.rendered }}</h3></div>
         <div class="col" id="post"></div>
+        <div class="col" id="post2"></div>
       </div>
     </div>
   </q-page>
@@ -14,6 +15,10 @@ import { defineComponent, ref } from 'vue'
 import { useQuasar, Notify } from "quasar"
 import APIService from "../../services/api"
 import ParseWP from "../../services/parseWP"
+import Prism from 'prismjs'
+import 'prismjs/components/prism-javascript'
+import 'prismjs/components/prism-python'
+import 'prismjs/themes/prism-tomorrow.css'
 
 export default defineComponent({
   name: 'LoginPage',
@@ -37,9 +42,14 @@ export default defineComponent({
         this.post = post;
         ParseWP.format_post(post.content.rendered).then((results) => {
           document.getElementById("post").innerHTML = results
+          let update_post = document
+          ParseWP.format_post_2(update_post).then((new_code) => {
+            document.getElementById("post2").innerHTML = new_code
+          });
         });
         await APIService.get_media(post.featured_media).then((media) => {
           this.image = media.data.source_url
+          Prism.highlightAll()
         })
       })
 
@@ -56,6 +66,7 @@ export default defineComponent({
     console.log(post_id)
     this.post_id = post_id;
     this.get_post(post_id);
+    Prism.highlightAll()
   },
 })
 </script>
