@@ -2,9 +2,7 @@
   <q-page>
     <div class="row justify-center">
       <div class="col-10" v-if="post">
-        <div class="col text-center">
-          <h3>{{ post.title.rendered }}</h3>
-        </div>
+        <div class="col text-center"><h3>{{ post.title.rendered }}</h3></div>
         <div class="col" id="post"></div>
         <div class="col" id="post2"></div>
       </div>
@@ -80,19 +78,19 @@ export default defineComponent({
       // if (figure) {
       let figure = document.getElementsByTagName("figure")
       let parent = figure.parentNode
-      console.log(parent)
-      let image = document.getElementById("p-image").getElementsByTagName("img")
-      console.log(image)
-      image.removeAttribute('width')
-      image.removeAttribute('height')
-      image.removeAttribute('sizes')
-      image.classList.add('full-width')
-      let new_parent = document.createElement('div')
-      new_parent.classList.add('col-lg-4', 'col-md-4', 'col-sm-10')
-      new_parent.appendChild(image)
-      parent.parentNode.replaceChild(new_parent, parent)
+        console.log(parent)
+        let image = document.getElementById("p-image").getElementsByTagName("img")
+        console.log(image)
+        image.removeAttribute('width')
+        image.removeAttribute('height')
+        image.removeAttribute('sizes')
+        image.classList.add('full-width')
+        let new_parent = document.createElement('div')
+        new_parent.classList.add('col-lg-4', 'col-md-4', 'col-sm-10')
+        new_parent.appendChild(image)
+        parent.parentNode.replaceChild(new_parent, parent)      
       // }
-    },
+    }, 
 
 
     async format_buttons() { // works

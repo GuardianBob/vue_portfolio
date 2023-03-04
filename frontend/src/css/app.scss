@@ -58,3 +58,46 @@
 .cstm-w-3-qtr {
   width: 75%;
 }
+
+.is-layout-flex {
+  display: flex;
+  // flex-wrap: wrap;
+  align-content: space-between;
+  padding: 0px;
+  margin: 0px;
+}
+
+// .is-layout-flow .wp-block-image {
+//   // width: 100%;
+//   display: flex;
+//   flex-wrap: wrap;
+//   padding: 0px;
+//   margin: 0px;
+// }
+
+.aligncenter, .has-text-align-center{
+  text-align: center;
+}
+
+pre {
+  max-height: 200px;
+  overflow: scroll;
+}
+
+.wp-block-columns {
+  justify-content: space-between;
+}
+
+.is-layout-flow ul {
+  list-style-type: none;
+}
+
+.border-rounded {
+  border: 1px solid grey;
+  border-radius: 5px;
+
+}
+
+.is-content-justification-center {
+  justify-content: center;
+}

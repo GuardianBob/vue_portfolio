@@ -8,16 +8,20 @@
       <div class="circle-cursor circle-cursor-inner" ref="circleCursorInner"></div>
   
       <!-- start preloader-->
-      <!-- <div class="preloader" ref="preloader">
+      <div class="preloader" ref="preloader">
         <div class="row preloader-content justify-center">
           <div class="logo">
             <img src="src/assets/JBear_Logo_No_Letters_White.svg" alt="JBear Creations Logo">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 199">
+              <path
+                d="M0.720001 8.91999V0.855993H58.32L169.488 190.648V199H112.176L0.720001 8.91999ZM114.768 73.144V0.855993H169.488V166.744L114.768 73.144ZM0.720001 32.824L55.44 126.424V199H0.720001V32.824Z" />
+            </svg> -->
           </div>
           <div class="loading-bar">
             <span class="loading-bar-progress"></span>
           </div>
         </div>
-      </div> -->
+      </div>
       <!-- end preloader-->
   
       <!-- start of header -->
@@ -165,10 +169,10 @@
             </li>
           </ul>
         </div>
-<!--   
+  
         <div class="scroll-down">
           <a href="#about" title="Scroll Down">Scroll</a>
-        </div> -->
+        </div>
       </div>
       <!-- end of hero section -->
   
