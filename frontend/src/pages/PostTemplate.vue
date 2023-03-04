@@ -82,25 +82,7 @@ export default defineComponent({
       let post
       await APIService.get_post(id).then(async (results) => {
         post = results.data.content.rendered;
-        // console.log(post);
-        
-        // ParseWP.format_post(post.content.rendered).then((results) => {
-        //   document.getElementById("post").innerHTML = results
-        //   let update_post = document
-        //   ParseWP.format_post_2(update_post).then((new_code) => {
-        //     document.getElementById("post2").innerHTML = new_code
-        //   });
-        // });
-        // await APIService.get_media(post.featured_media).then((media) => {
-        //   this.image = media.data.source_url
-        //   Prism.highlightAll()
-        // })
       })
-      post = await post.replace('<pre class="wp-block-code"><code>', '')
-      post = await post.replace('</code></pre>', '')
-      post = await post.replaceAll('&#91;', '[')
-      let post_string = JSON.stringify(post);
-      console.log(JSON.parse(post_string))
       this.post = JSON.parse(post);
       console.log(this.post)
       return

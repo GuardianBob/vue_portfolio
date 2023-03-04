@@ -32,28 +32,17 @@ class ParseWP {
       r_height = /<img[^>]+height="?([^"\s]+)"?[^>]*\/>/g;
     let post_string = JSON.stringify(post)
     let new_post
-    // new_post = await post.replace(/\bwidth="(\d+)"/g, 'width="100%"')
-    // new_post = await new_post.replace(/\bheight="(\d+)"/g, '')
-
-    // while (media = r_width.exec(post)) {
-    //   // urls.push(media[1]);
-    //   console.log(media[0])
-
-    // }
-    // console.log(new_post);
-    return post
+    new_post = await post.replace(/\bwidth="(\d+)"/g, 'width="100%"')
+    new_post = await new_post.replace(/\bheight="(\d+)"/g, '')
+    new_post = await new_post.replace(/\bfigure/g, 'div')
+    // new_post = await new_post.replace(/\bfigure/g, 'div')
+    new_post = await new_post.replace(/\bstyle="flex-basis:.*%"/g, '')
+    // new_post = await new_post.replace(/\bstyle="flex-basis:66.66%"/g, '')
+    // new_post = await new_post.replace(/\bis-layout-flex wp-container-9 wp-block-columns /g, '')
+    new_post = await new_post.replace(/\bis-layout-flex wp-container.* wp-block-columns /g, '')
+    return new_post
   }
   
-  async format_post_2(post) {
-    // console.log(post);
-    // post = await this.format_title_image(post)
-    // post = await this.format_images(post)
-    // let title_image = this.format_title_image(post.getElementById("title_image").innerHTML);
-    // let collection = document.getElementsByTagName("") 
-    // console.log(title_image);
-    return post
-  }
-
   async format_title_image(post) {
     // format main image
     // let parser = new DOMParser(); // use to convert string to DOM Element

@@ -42,25 +42,38 @@ export default defineComponent({
         this.post = post;
         ParseWP.format_post(post.content.rendered).then((results) => {
           document.getElementById("post").innerHTML = results
-          let update_post = document
-          this.format_image_by_id("title_image", ['col-lg-6', 'cols-md-6', 'col-sm-8', 'col-xs-8', 'text-center', 'full-width'])
+          this.format_image_by_id("title_image", ['col-lg-6', 'col-md-6', 'col-sm-8', 'col-xs-8', 'text-center', 'full-width'])
           this.format_buttons();
-          // this.format_images();
-          ParseWP.format_post_2(update_post).then((new_code) => {
-            // formatted_code = this.format_layout(new_code)
-            // document.getElementById("post2").innerHTML = new_code;
-            // this.format_image_by_class("")
-          });
-        });
-        await APIService.get_media(post.featured_media).then((media) => {
-          this.image = media.data.source_url
           Prism.highlightAll()
-        })
+        });
+        // await APIService.get_media(post.featured_media).then((media) => {
+        //   this.image = media.data.source_url
+        // })
       })
 
     },
 
     async format_images() {
+      // format main image
+      let post_image = document.getElementById('left-img').firstChild;
+      let image_src = document.getElementById('left-img').firstChild.src;
+      let parent = document.getElementById('left-img').parentNode;
+      let img = parent.getElementsByTagName('img');
+      let post_text = parent.parentNode.getElementsByTagName('p');
+      console.log(img[0].src)
+      console.log(post_text[0].innerHTML)
+      console.log(image_src)
+      let new_image = document.createElement('div');
+      let new_parent = document.createElement('div');
+      new_parent.classList.add('col-lg-4', 'col-md-4', 'col-sm-10')
+      new_image.classList.add('col-lg-4', 'col-md-4', 'col-sm-10')
+      new_image.innerHTML = `<img src=${image_src} class="full-width" />`
+      // new_parent.appendChild(image)
+      // parent.parentNode.replaceChild(new_parent, parent)
+      return post
+    },
+
+    async format_images2() {
       // let figure = document.getElementsByTagName("figure")
       // if (figure) {
       let figure = document.getElementsByTagName("figure")
@@ -79,7 +92,8 @@ export default defineComponent({
       // }
     }, 
 
-    async format_buttons() {
+
+    async format_buttons() { // works
       let el = document.getElementById('demo_link').parentNode;
       let btn_text = document.getElementById('demo_link').firstChild.innerHTML;
       let link = document.getElementById('demo_link').firstChild.getAttribute("href");
