@@ -138,21 +138,21 @@ export default defineComponent({
 
       if (storageSavedTheme) {
         this.savedTheme = storageSavedTheme;
-        console.log("theme: ", this.savedTheme)
+        // console.log("theme: ", this.savedTheme)
         this.savedTheme === 'light_theme' ? this.set_light() : this.set_dark();
       } else {
         // So, try to get the browser default theme or make your own default
         // Check to see if Media-Queries are supported
         if (window.matchMedia) {
-          console.log("matching")
+          // console.log("matching")
           // Check if the dark-mode Media-Query matches
           if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
             this.savedTheme = 'dark_theme';
-            console.log("dark");
+            // console.log("dark");
           } else {
             this.savedTheme = 'light_theme';
             this.toggle_theme()
-            console.log("light");
+            // console.log("light");
           }
         } else {
           // Default (when Media-Queries are not supported)
@@ -165,7 +165,7 @@ export default defineComponent({
     toggle_theme() {
       this.savedTheme === 'light_theme' ? this.set_dark() : this.set_light(); // toggle theme
       localStorage.setItem('JBearSavedTheme', this.savedTheme);
-      console.log("clicked")
+      // console.log("clicked")
     },
 
     async spin_saw() {
@@ -188,7 +188,7 @@ export default defineComponent({
       this.savedTheme = 'dark_theme'
       this.toggle_color = 'grey-10'
       this.toggle_value = true
-      console.log("dark");
+      // console.log("dark");
     },
 
     set_light() {
@@ -200,7 +200,7 @@ export default defineComponent({
       this.savedTheme = 'light_theme'
       this.toggle_color = 'white'
       this.toggle_value = false
-      console.log("light");
+      // console.log("light");
     }
 
   },
