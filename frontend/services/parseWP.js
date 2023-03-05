@@ -40,9 +40,10 @@ class ParseWP {
     // new_post = await new_post.replace(/\bstyle="flex-basis:66.66%"/g, '')
     // new_post = await new_post.replace(/\bis-layout-flex wp-container-9 wp-block-columns /g, '')
     new_post = await new_post.replace(/\bis-layout-flex wp-container.* wp-block-columns /g, '')
-    new_post = await new_post.replace(/\bclass=".*wp-block-gallery.*"/g, 'class="row justify-around"')
+    new_post = await new_post.replace(/\bclass=".*wp-block-gallery.*"/g, 'class="row justify-around "')
     new_post = await new_post.replace(/\bwp-block-image size-large/g, 'col-lg-3 col-md-3 col-sm-8 col-xs-10 q-ma-sm')
-    
+    new_post = await new_post.replace(/\bngg-galleryoverview /g, 'row justify-around ')
+    new_post = await new_post.replace(/\bngg-gallery-thumbnail-box/g, 'col-lg-3 col-md-3 col-sm-8 col-xs-10 q-ma-sm')
     return new_post
   }
   
