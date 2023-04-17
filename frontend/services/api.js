@@ -25,7 +25,7 @@ class APIService {
   }
 
   get_tags() {
-    return api.get(`/tags`, );
+    return api.get(`/tags?per_page=100`, );
   }
 
   get_categories() {
