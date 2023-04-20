@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <!-- <q-header>       -->
-    <q-header style="background-color: #121212;">
+    <q-header style="background-color: #1D1D1D;">
       <q-toolbar>
         <q-btn
           flat
@@ -12,12 +12,18 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title class="q-pt-xs">
+        <q-toolbar-title v-if="$q.platform.is.mobile" class="q-pt-xs text-center q-mr-lg">
           <img alt="JBear logo" src="~assets/JBear_Logo_Header_Saw.png" style="width: 50px;" class="saw" @mouseenter="spin_saw" @click="spin_saw">
           <a href="/">
             <img alt="JBear logo" src="~assets/JBear_Logo_Header_Text.png" style="width: 200px;" >
           </a>
         </q-toolbar-title>
+        <q-toolbar-title v-if="$q.platform.is.desktop" class="q-pt-xs">
+            <img alt="JBear logo" src="~assets/JBear_Logo_Header_Saw.png" style="width: 50px;" class="saw" @mouseenter="spin_saw" @click="spin_saw">
+            <a href="/">
+              <img alt="JBear logo" src="~assets/JBear_Logo_Header_Text.png" style="width: 200px;" >
+            </a>
+          </q-toolbar-title>
       </q-toolbar>
     </q-header>
     
@@ -113,10 +119,9 @@ export default defineComponent({
   components: {
     EssentialLink
   },
-
   setup () {
     const leftDrawerOpen = ref(false)
-    // const $q = useQuasar();
+    const $q = useQuasar();
     // $q.dark.set(true);
 
     return {

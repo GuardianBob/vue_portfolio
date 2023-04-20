@@ -13,6 +13,7 @@ const routes = [
       { path: '/coding', component: () => import('pages/ListPosts.vue') },
       { path: '/workshop', component: () => import('pages/ListPosts.vue') },
       { path: '/post/:id?', component: () => import('pages/Post.vue') },
+      { path: '/contact', component: () => import('pages/ContactPage.vue') },
     ]
   },
   {

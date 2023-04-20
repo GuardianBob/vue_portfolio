@@ -1,5 +1,6 @@
 <template>
   <q-page class="items-center">
+    
     <div class="row flex flex-center q-mt-xl q-mb-sm">
         <img alt="JBear Creations" src="~assets/JBear_Logo_front_Orange.png" style="width: 25%;">
         <img alt="JBear Creations" src="~assets/JBear_Logo_Saw_Orange.png" style="width: 25%;" class="big-saw" @click="spin_saw">
